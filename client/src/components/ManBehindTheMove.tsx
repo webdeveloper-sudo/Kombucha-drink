@@ -24,7 +24,7 @@ const ManBehindTheMove = () => {
           subtitleColor="text-white"
         />
         <div
-          className="bg-forest-green max-w-7xl mx-auto z-10 px-20 py-6 pt-8"
+          className="bg-forest-green md:max-w-7xl max-w-full mx-auto z-10 md:px-20 px-10 py-6 pt-8"
           style={{
             borderTopLeftRadius: "120px",
             borderBottomLeftRadius: "0px",
