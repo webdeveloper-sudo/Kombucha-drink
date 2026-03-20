@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -72,10 +72,8 @@ const products = [
   },
 ];
 
-const categories = ["All", "Wellness", "Digestion", "Beauty", "Energy"];
-
 const AllFlavours = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory] = useState<string>("All");
   const [swiperRef, setSwiperRef] = useState<any | null>(null);
 
   const filteredProducts =
@@ -143,7 +141,7 @@ const AllFlavours = () => {
       `}</style>
 
       {/* Section Header */}
-      <Heading title1="Our" title2="Flavours" subtitle="Discover" textAlignment="center"/>
+      <Heading title1="Our" title2="Flavours" subtitle="Discover" textAlignment="center" titleColor="text-gray-800" subtitleColor="text-forest-green"/>
 
       {/* Category Filter */}
       {/* <div className="flex flex-wrap items-center justify-center gap-3 mb-12 px-4">
@@ -163,8 +161,17 @@ const AllFlavours = () => {
       </div> */}
 
       {/* Carousel Container */}
-      <div className="w-full max-w-[1400px] overflow-hidden flex justify-center pb-8">
-        {carouselItems.length > 0 ? (
+      <div className="relative w-full container mx-auto flex items-center justify-center  px-2 md:px-8">
+        {carouselItems.length > 0 && (
+          <button
+            onClick={() => swiperRef?.slidePrev()}
+            className="absolute left-2 md:left-8 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 bg-white/80 text-gray-600 font-bold text-xl hover:bg-forest-green hover:border-forest-green hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:-translate-x-1"
+          >
+            {"<"}
+          </button>
+        )}
+        <div className="w-full overflow-hidden flex justify-center px-4 md:px-12">
+          {carouselItems.length > 0 ? (
           <Swiper
             modules={[EffectCoverflow, Autoplay]}
             effect="coverflow"
@@ -241,25 +248,17 @@ const AllFlavours = () => {
             No flavours found for this category.
           </div>
         )}
-      </div>
+        </div>
 
-      {/* Custom Prev/Next Arrows */}
-      {carouselItems.length > 0 && (
-        <div className="flex justify-center items-center gap-6">
-          <button
-            onClick={() => swiperRef?.slidePrev()}
-            className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 text-gray-600 font-bold text-xl hover:bg-forest-green hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:-translate-x-1"
-          >
-            {"<"}
-          </button>
+        {carouselItems.length > 0 && (
           <button
             onClick={() => swiperRef?.slideNext()}
-            className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 text-gray-600 font-bold text-xl hover:bg-forest-green hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:translate-x-1"
+            className="absolute right-2 md:right-8 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 bg-white/80 text-gray-600 font-bold text-xl hover:bg-forest-green hover:border-forest-green hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:translate-x-1"
           >
             {">"}
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

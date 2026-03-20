@@ -15,21 +15,12 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-forest-green text-white pt-24 pb-12 overflow-hidden">
-      {/* Ripped Edge SVG Mask/Overlay */}
-      <div className="absolute top-0 left-0 w-full h-16 bg-white overflow-hidden rotate-180">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="absolute bottom-0 w-full h-full fill-white"
-        >
-          <path d="M0,0 Q300,100 600,0 T1200,0 L1200,120 L0,120 Z" />
-        </svg>
-      </div>
 
-      <div className="max-w-[1240px] mx-auto px-6 lg:px-12 relative z-10">
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Logo & Mission */}
-          <div >
+          <div>
             <div className="bg-white rounded-full inline-block p-2 mb-3 border border-white/20 shadow-lg">
               <img
                 src={hopelifelogo}
@@ -84,11 +75,11 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Contact Info */}
-          <div className="space-y-6">
-            <h4 className="text-2xl text-white font-heading font-bold tracking-wide">
+          <div className="">
+            <h4 className="mb-6 text-2xl text-white font-heading font-bold tracking-wide">
               Get in Touch
             </h4>
-            <ul className="space-y-4 font-body text-white/70">
+            <ul className="space-y-2 mb-3 font-body text-white/70">
               <li className="flex gap-4 items-start">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
                   <MapPin className="w-10 h-5" />
@@ -110,17 +101,14 @@ const Footer = () => {
                 <span>hello@hopekombucha.com</span>
               </li>
             </ul>
-          </div>
 
-          {/* Column 4: Newsletter */}
-          <div className="space-y-6">
-            <h4 className="text-2xl text-white font-heading font-bold tracking-wide">
+            {/* <h4 className="text-2xl text-white font-heading font-bold tracking-wide">
               Stay Updated
-            </h4>
-            <p className="text-white/70 font-body text-sm">
-              Subscribe to get wellness tips and exclusive flavour releases.
-            </p>
-            <form className="relative group">
+            </h4> */}
+            <span className="text-white/70  font-body text-sm">
+              Stay Connected with us !
+            </span>
+            <form className="relative group mt-2">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -134,6 +122,25 @@ const Footer = () => {
                 <ArrowRight size={18} />
               </button>
             </form>
+          </div>
+
+          {/* Column 4: Location Map */}
+          <div className="space-y-6">
+            <h4 className="text-2xl font-heading font-bold text-white tracking-wide">
+              Find Us
+            </h4>
+            <div className="w-full h-full pb-10 rounded overflow-hidden  shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9914406081493!2d2.2922926156744043!3d48.8583736086627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1689241975!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Location Map"
+              ></iframe>
+            </div>
           </div>
         </div>
 

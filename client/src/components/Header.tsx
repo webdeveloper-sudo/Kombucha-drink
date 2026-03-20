@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import hopelifelogo from "../assets/images/logo.png";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

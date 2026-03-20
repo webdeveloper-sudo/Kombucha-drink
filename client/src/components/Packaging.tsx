@@ -1,6 +1,6 @@
-import React from 'react'
+
 import packaging from "../assets/images/packaging.png"
-import flower from "../assets/images/bg/flower.png"
+
 
 const Packaging = () => {
   return (
@@ -8,7 +8,7 @@ const Packaging = () => {
       className="w-full relative py-20 pb-20"
     >
    
-      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-16 px-6 relative z-10">
+      <div className="container mx-auto flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-16 px-6 relative z-10">
         {/* Right Side: Image */}
         <div className="flex-1 w-full flex h-[500px] justify-center md:justify-start">
           <div 
