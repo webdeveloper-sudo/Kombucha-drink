@@ -1,4 +1,5 @@
 import { QuoteIcon } from "lucide-react";
+import Button from "./ui/Button";
 
 const HopeKombuchaFits = () => {
   return (
@@ -30,7 +31,10 @@ const HopeKombuchaFits = () => {
           fits seamlessly into modern lifestyles - at the gym, at work, at home,
           or in cafés.
         </p>
-        <QuoteIcon size={80} className="text-[#FF852C]/90 ms-auto mb-2" />
+      <div className="flex items-center justify-between py-2">
+        <Button title="Enquire Now" href="#contact" variant="secondary" />
+        <QuoteIcon size={80} className="text-[#FF852C]/90 " />
+      </div>
       </div>
     </div>
   );

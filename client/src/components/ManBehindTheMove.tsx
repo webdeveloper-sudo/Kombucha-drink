@@ -32,7 +32,11 @@ const ManBehindTheMove = () => {
             borderTopRightRadius: "0px",
           }}
         >
-          <p className="text-xl text-center md:text-4xl mb-10 mt-5 uppercase font-heading font-semibold leading-relaxed text-white/90 max-w-[90%]">
+          
+          {/* Content Section */}
+          <div className="text-lg md:text-[18px] text-white/90 space-y-8 font-body leading-[1.85] drop-shadow-md">
+            <ul className="space-y-4 mb-4 font-body text-[1.15rem] mx-auto max-w-4xl text-white/90">
+            <p className="text-xl text-left md:text-4xl mb-10 mt-5 uppercase font-heading font-semibold leading-relaxed text-white/90 max-w-[90%]">
             <span className=" font-bold">Dr. Arawindhan J</span>
             <p
               className={`text-white/80 uppercase text-sm tracking-[0.3em] font-medium mb-3`}
@@ -40,9 +44,6 @@ const ManBehindTheMove = () => {
               Founder & Visionary - Hope Kombucha
             </p>
           </p>
-          {/* Content Section */}
-          <div className="text-lg md:text-[18px] text-white/90 space-y-8 font-body leading-[1.85] drop-shadow-md">
-            <ul className="space-y-4 mb-4 font-body text-[1.15rem] mx-auto max-w-4xl text-white/90">
               <li className="flex items-start">
                 <img
                   src={leaficon}

@@ -11,6 +11,7 @@ import Ingredients from "./components/Ingredients";
 import HopeKombuchaFits from "./components/HopeKombuchaFits";
 import ManBehindTheMove from "./components/ManBehindTheMove";
 import Contact from "./components/Contact";
+import Testimonial from "./components/Testimonial";
 
 function App() {
   const [showFB, setShowFB] = useState(false);
@@ -27,16 +28,20 @@ function App() {
     <>
       <Header />
       <Hero />
-      <AllFlavours />
-      <HopeKombuchaFits/>
-      <OurCraftmanship/>
-      <Ingredients/>
-       
-      
-           <ManBehindTheMove />
-           <OurCustomers />
-           <Contact />
-
+      <div id="our-flavours">
+        <AllFlavours />
+      </div>
+      <HopeKombuchaFits />
+      <OurCraftmanship />
+      <Ingredients />
+      <div id="our-story">
+        <ManBehindTheMove />
+      </div>
+      <Testimonial />
+      <OurCustomers />
+      <div id="contact">
+        <Contact />
+      </div>
       {/* <Packaging /> */}
       <Footer />
       {showFB && (

@@ -26,11 +26,11 @@ const Header = () => {
         <img src={hopelifelogo} alt="Logo" width={100} />
       </div>
       <nav className="hidden md:flex items-center gap-8">
-        {["Shop", "Our Story", "Process", "Journal"].map((item) => (
+        {["Home", "Our Story", "Our Flavours", "Contact"].map((item) => (
           <a
             key={item}
             href={`#${item.toLowerCase().replace(" ", "-")}`}
-            className={` ${isScrolled ? "text-forest-green/80 font-bold" : "text-white/80 font-medium "} hover:text-white uppercase text-xs lg:text-sm tracking-[0.2em]  transition-colors `}
+            className={` ${isScrolled ? "text-forest-green/80 font-bold hover:underline hover:underline-offset-8 hover:decoration-orange decoration-1" : "text-white/80 font-medium hover:underline hover:underline-offset-8 hover:decoration-white"} uppercase text-xs lg:text-sm tracking-[0.2em]  transition-colors `}
           >
             {item}
           </a>

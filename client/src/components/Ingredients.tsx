@@ -5,6 +5,7 @@ import botanical from "../assets/images/ingredients/botanical.png";
 import scoby from "../assets/images/ingredients/scope.png";
 import Heading from "./ui/Heading";
 import customers from "../assets/images/customers.png";
+import Button from "./ui/Button";
 
 const Ingredients = () => {
   const ingredients = [
@@ -71,6 +72,10 @@ const Ingredients = () => {
               </div>
             ))}
           </div>
+                 <div className="pt-8">
+                   <Button title="Explore Our Flavours" href="#our-flavours" variant="secondary" />
+                 </div>
+
         </div>
            {/* LEFT IMAGE */}
         <div className="w-full md:w-1/2">

@@ -12,6 +12,7 @@ import RoseImg from "../assets/images/allflavours/Rose.png";
 import MintImg from "../assets/images/allflavours/Mint.png";
 import HibiscusImg from "../assets/images/allflavours/Hibiscus.png";
 import Heading from "./ui/Heading";
+import Button from "./ui/Button";
 
 const products = [
   {
@@ -108,7 +109,7 @@ const AllFlavours = () => {
           Strictly hide any slides Swiper considers outside the "visible" range.
           With slidesPerView=5, exactly 5 slides will have .swiper-slide-visible
         */
-        .swiper-slide {
+        .flavours-swiper .swiper-slide {
           opacity: 0 !important;
           pointer-events: none;
           transition: opacity 0.5s ease;
@@ -118,14 +119,14 @@ const AllFlavours = () => {
           transform-style: preserve-3d;
           -webkit-transform-style: preserve-3d;
         }
-        .swiper-slide-visible {
+        .flavours-swiper .swiper-slide-visible {
           opacity: 1 !important;
           pointer-events: auto;
           visibility: visible;
         }
         
         /* Make the center active item pop out significantly larger */
-        .swiper-slide > div {
+        .flavours-swiper .swiper-slide > div {
           transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
@@ -133,7 +134,7 @@ const AllFlavours = () => {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
-        .swiper-slide-active > div {
+        .flavours-swiper .swiper-slide-active > div {
           transform: scale(1.15) translateY(-10px) translateZ(0) !important;
           // box-shadow: 0 40px 60px -15px rgba(0,0,0,0.15) !important;
           z-index: 50;
@@ -194,7 +195,7 @@ const AllFlavours = () => {
               slideShadows: false,
             }}
             onSwiper={setSwiperRef}
-            className="w-full"
+            className="w-full flavours-swiper"
           >
             {carouselItems.map((product, index) => (
               <SwiperSlide
@@ -250,6 +251,8 @@ const AllFlavours = () => {
         )}
         </div>
 
+        
+
         {carouselItems.length > 0 && (
           <button
             onClick={() => swiperRef?.slideNext()}
@@ -259,6 +262,9 @@ const AllFlavours = () => {
           </button>
         )}
       </div>
+      <div className="mx-auto py-4">
+          <Button title="order now" href="#contact" variant="secondary" />
+        </div>
     </div>
   );
 };

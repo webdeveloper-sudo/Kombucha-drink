@@ -115,7 +115,7 @@ const Contact = () => {
             <h3 className="text-3xl font-heading font-bold text-gray-800 mb-8 flex items-center gap-3">
               <img
                 src={leaficon}
-                className="w-8 h-8 rounded-full bg-white/20 p-1"
+                className="w-8 h-8 rounded-full bg-orange p-1"
                 alt="leaf icon"
               />
               Send Us a Message
@@ -128,10 +128,15 @@ const Contact = () => {
                   className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange focus:bg-white/15 transition-all outline-none"
                 />
               </div>
-              <div>
+              <div className="flex items-center gap-2">
                 <input
                   type="email"
                   placeholder="Your Email"
+                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange focus:bg-white/15 transition-all outline-none"
+                />
+                <input
+                  type="mobile"
+                  placeholder="Your Mobile"
                   className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange focus:bg-white/15 transition-all outline-none"
                 />
               </div>
@@ -144,7 +149,7 @@ const Contact = () => {
               </div>
               <button
                 type="button"
-                className="group flex items-center justify-center gap-3 bg-orange hover:bg-[#e67727] text-white font-bold text-lg rounded-xl px-6 py-4 transition-all mt-4 hover:shadow-lg"
+                className="group flex items-center justify-center gap-3 bg-orange uppercase text-sm lg:text-[14px] tracking-[0.2em] rounded-full text-white/80 font-medium px-6 py-3.5"
               >
                 Submit Now
                 <Send
