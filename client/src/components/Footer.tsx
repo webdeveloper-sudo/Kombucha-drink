@@ -80,26 +80,27 @@ const Footer = () => {
               Get in Touch
             </h4>
             <ul className="space-y-2 mb-3 font-body text-white/70">
-              <li className="flex gap-4 items-start">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
-                  <MapPin className="w-10 h-5" />
-                </div>
-                <span>123 Wellness Blvd, Green Valley, CA 90210</span>
-              </li>
-
+             
               <li className="flex gap-4 items-center">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span>+91 90000 00000</span>
+                <span>+91 72005 04628</span>
               </li>
 
               <li className="flex gap-4 items-center">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
                   <Mail className="w-10 h-5" />
                 </div>
-                <span>hello@hopekombucha.com</span>
+                <span>vp.expansions@hopemarket.in</span>
               </li>
+               <li className="flex gap-4 items-start">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
+                  <MapPin className="w-10 h-5" />
+                </div>
+                <span>Marie Oulgaret, Auroville Road, Pondicherry - 605111, India</span>
+              </li>
+
             </ul>
 
             {/* <h4 className="text-2xl text-white font-heading font-bold tracking-wide">

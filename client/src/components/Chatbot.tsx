@@ -364,9 +364,9 @@ const elixirReplies = [
 ];
 
 const pricingReplies = [
-  "For the latest pricing on Hope Kombucha, please reach out to us directly or visit your nearest retail partner! 🍹 Our 300ml glass bottles are competitively priced for a premium wellness beverage. Our team will be happy to share current pricing! 💚",
-  "We'd love to share our pricing with you! 💚 Hope Kombucha is available in 300ml glass bottles. For exact pricing and bulk/retail queries, please contact our team — we have options for individual customers and retail partners alike! 🍹",
-  "Pricing varies by order type and location! 🌿 For individual bottles, packs, or B2B/retail pricing, please contact us directly. Hope Kombucha is designed to be accessible for every health-conscious individual! 🍹",
+  "For the latest pricing on Hope Kombucha, please reach out to us directly at +91 72005 04628 or vp.expansions@hopemarket.in or visit your nearest retail partner! 🍹 Our 300ml glass bottles are competitively priced for a premium wellness beverage. Our team will be happy to share current pricing! 💚",
+  "We'd love to share our pricing with you! 💚 Hope Kombucha is available in 300ml glass bottles. For exact pricing and bulk/retail queries, please contact our team at +91 72005 04628 or vp.expansions@hopemarket.in — we have options for individual customers and retail partners alike! 🍹",
+  "Pricing varies by order type and location! 🌿 For individual bottles, packs, or B2B/retail pricing, please contact us directly at +91 72005 04628 or vp.expansions@hopemarket.in. Hope Kombucha is designed to be accessible for every health-conscious individual! 🍹",
 ];
 
 const packagingReplies = [
@@ -381,9 +381,9 @@ const storageReplies = [
 ];
 
 const deliveryReplies = [
-  "For delivery options in your area, please contact our team directly! 🌿 Hope Kombucha is designed for sustainable market growth and we're actively expanding our delivery network! 🍹 Reach out for the latest updates!",
-  "We're growing our delivery reach! 🍹 Hope Kombucha is available through select retail partners and direct supply. Contact us to find options near you — our team will guide you! 💚",
-  "Delivery details vary by location! 🌿 Hope Kombucha is built for retail and direct supply with sustainable market expansion in mind. Get in touch for up-to-date delivery information for your area! 🍹",
+  "For delivery options in your area, please contact our team directly at +91 72005 04628 or vp.expansions@hopemarket.in! 🌿 Hope Kombucha is designed for sustainable market growth and we're actively expanding our delivery network! 🍹 Reach out for the latest updates!",
+  "We're growing our delivery reach! 🍹 Hope Kombucha is available through select retail partners and direct supply. Contact us at +91 72005 04628 or vp.expansions@hopemarket.in to find options near you — our team will guide you! 💚",
+  "Delivery details vary by location! 🌿 Hope Kombucha is built for retail and direct supply with sustainable market expansion in mind. Get in touch at +91 72005 04628 or vp.expansions@hopemarket.in for up-to-date delivery information for your area! 🍹",
 ];
 
 const ingredientReplies = [
@@ -460,14 +460,14 @@ const alcoholReplies = [
 ];
 
 const whereToBuyReplies = [
-  "Hope Kombucha is available through our retail partners and is expanding to new locations! 🍹 For the nearest outlet or to place an order, please reach out to us directly — our team will guide you! 💚",
-  "We're growing our retail presence fast! 🌿 Hope Kombucha is designed for scalable retail expansion. Contact us to find the nearest stockist or to set up a supply arrangement! 🍹",
-  "You can find Hope Kombucha through our official retail channels! 💚 We're expanding rapidly — reach out for the latest stockist information and delivery options near you! 🍹",
+  "Hope Kombucha is available through our retail partners and is expanding to new locations! 🍹 For the nearest outlet or to place an order, please reach out to us directly at +91 72005 04628 or vp.expansions@hopemarket.in — our team will guide you! 💚",
+  "We're growing our retail presence fast! 🌿 Hope Kombucha is designed for scalable retail expansion. Contact us at +91 72005 04628 or vp.expansions@hopemarket.in to find the nearest stockist or to set up a supply arrangement! 🍹",
+  "You can find Hope Kombucha through our official retail channels! 💚 We're expanding rapidly — reach out at +91 72005 04628 or vp.expansions@hopemarket.in for the latest stockist information and delivery options near you! 🍹",
 ];
 
 const wholesaleReplies = [
-  "We'd love to partner with you! 💚 Hope Kombucha is designed as a scalable model for retail expansion — perfect for cafés, gyms, health stores, restaurants, and corporate wellness programs. Reach out for B2B pricing and supply details! 🍹",
-  "Great interest! 🌿 Hope Kombucha offers retail and wholesale supply options. Whether you're a café, health store, gym, or events organizer, we have a solution for you! Contact our sales team for details! 🍹",
+  "We'd love to partner with you! 💚 Hope Kombucha is designed as a scalable model for retail expansion — perfect for cafés, gyms, health stores, restaurants, and corporate wellness programs. Reach out at +91 72005 04628 or vp.expansions@hopemarket.in for B2B pricing and supply details! 🍹",
+  "Great interest! 🌿 Hope Kombucha offers retail and wholesale supply options. Whether you're a café, health store, gym, or events organizer, we have a solution for you! Contact our sales team at +91 72005 04628 or vp.expansions@hopemarket.in for details! 🍹",
 ];
 
 const veganReplies = [

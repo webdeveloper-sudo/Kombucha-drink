@@ -37,7 +37,9 @@ function App() {
       <div id="our-story">
         <ManBehindTheMove />
       </div>
-      <Testimonial />
+      <div id="client-says">
+        <Testimonial />
+      </div>
       <OurCustomers />
       <div id="contact">
         <Contact />

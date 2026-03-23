@@ -32,27 +32,7 @@ const Contact = () => {
 
           {/* Contact Details Grid */}
           <div className="flex flex-col gap-3 mb-10 pl-2">
-            <div
-              className="flex items-center gap-6 group bg-forest-green px-8 py-4"
-              style={{
-                borderTopLeftRadius: "30px",
-                borderBottomLeftRadius: "0px",
-                borderBottomRightRadius: "30px",
-                borderTopRightRadius: "0px",
-              }}
-            >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange text-white group-hover:bg-orange group-hover:text-white transition-all duration-300 shadow-sm">
-                <MapPin size={26} />
-              </div>
-              <div>
-                <h4 className="text-white font-bold text-xl font-heading mb-1">
-                  Our Location
-                </h4>
-                <span className="text-white/90 font-body text-md">
-                  123 Wellness Blvd, Green Valley, CA
-                </span>
-              </div>
-            </div>
+          
 
             <div
               className="flex items-center gap-6 group bg-forest-green px-8 py-4"
@@ -68,10 +48,10 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-white font-bold text-xl font-heading mb-1">
-                  Phone Number
+                  Enquire Us
                 </h4>
                 <span className="text-white/90 font-body text-md">
-                  +91 90000 00000
+                  +91 72005 04628
                 </span>
               </div>
             </div>
@@ -90,10 +70,31 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-white font-bold text-xl font-heading mb-1">
-                  Email Address
+                   Enquire Us
                 </h4>
                 <span className="text-white/90 font-body text-md">
-                  hello@hopekombucha.com
+                  vp.expansions@hopemarket.in
+                </span>
+              </div>
+            </div>
+              <div
+              className="flex items-center gap-6 group bg-forest-green px-8 py-4"
+              style={{
+                borderTopLeftRadius: "30px",
+                borderBottomLeftRadius: "0px",
+                borderBottomRightRadius: "30px",
+                borderTopRightRadius: "0px",
+              }}
+            >
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange text-white group-hover:bg-orange group-hover:text-white transition-all duration-300 shadow-sm">
+                <MapPin size={26} />
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-xl font-heading mb-1">
+                  Reach Us
+                </h4>
+                <span className="text-white/90 font-body text-md">
+                  Marie Oulgaret, Auroville Road, Pondicherry - 605111, India
                 </span>
               </div>
             </div>

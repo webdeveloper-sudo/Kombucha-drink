@@ -74,7 +74,7 @@ const OurCraftmanship = () => {
                   borderTopRightRadius: "0px",
                 }}
               >
-                <h3 className="text-xl  font-bold uppercase tracking-[0.1em] text-white">
+                <h3 className="text-[18px]  font-bold uppercase tracking-[0.1em] text-white">
                   {card.title}
                 </h3>
               </div>

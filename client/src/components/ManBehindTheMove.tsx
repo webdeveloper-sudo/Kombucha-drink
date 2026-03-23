@@ -52,7 +52,7 @@ const ManBehindTheMove = () => {
                 />
                 <span className="pt-2">
                   {" "}
-                  Hope Kombucha was founded in 2025 by{" "}
+                  Hope Kombucha was founded in 2021 by{" "}
                   <span className="font-bold text-white underline underline-offset-6 decoration-orange decoration-2">
                     Dr. Arawindhan J
                   </span>{" "}
