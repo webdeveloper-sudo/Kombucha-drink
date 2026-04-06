@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import AllFlavours from "./components/AllFlavours";
@@ -12,8 +13,9 @@ import HopeKombuchaFits from "./components/HopeKombuchaFits";
 import ManBehindTheMove from "./components/ManBehindTheMove";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
+import Showcase from "./components/Showcase";
 
-function App() {
+function MainApp() {
   const [showFB, setShowFB] = useState(false);
 
   useEffect(() => {
@@ -24,6 +26,7 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <>
       <Header />
@@ -53,6 +56,17 @@ function App() {
         </>
       )}
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainApp />} />
+        <Route path="/showcase" element={<Showcase />} />
+      </Routes>
+    </Router>
   );
 }
 
