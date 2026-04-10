@@ -1,5 +1,5 @@
 
-import packaging from "../assets/images/packaging.png"
+import packaging from "../assets/images/packaging.webp"
 
 
 const Packaging = () => {

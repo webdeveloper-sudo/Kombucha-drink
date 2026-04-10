@@ -1,6 +1,6 @@
-import nocolour from "../assets/images/specalites/no-colours.png";
-import noadditives from "../assets/images/specalites/no-additives.png";
-import nopreservatives from "../assets/images/specalites/no-preserves.png";
+import nocolour from "../assets/images/specalites/no-colours.webp";
+import noadditives from "../assets/images/specalites/no-additives.webp";
+import nopreservatives from "../assets/images/specalites/no-preserves.webp";
 import Heading from "./ui/Heading";
  
 const OurCraftmanship = () => {

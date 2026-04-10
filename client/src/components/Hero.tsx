@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
 
-import TurmericImg from "../assets/images/Turmeric.png";
-import GingerImg from "../assets/images/Ginger.png";
-import ElixirImg from "../assets/images/Elixir.png";
-import ButterflyPeaImg from "../assets/images/Butterfly Pea.png";
-import RoseImg from "../assets/images/Rose.png";
-import MintImg from "../assets/images/Mint.png";
-import HibiscusImg from "../assets/images/Hibiscus.png";
+import TurmericImg from "../assets/images/Turmeric.webp";
+import GingerImg from "../assets/images/Ginger.webp";
+import ElixirImg from "../assets/images/Elixir.webp";
+import ButterflyPeaImg from "../assets/images/Butterfly Pea.webp";
+import RoseImg from "../assets/images/Rose.webp";
+import MintImg from "../assets/images/Mint.webp";
+import HibiscusImg from "../assets/images/Hibiscus.webp";
 
 interface Product {
   id: number;

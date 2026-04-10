@@ -1,4 +1,4 @@
-import Packaging from "../assets/images/packaging.png";
+import Packaging from "../assets/images/packaging.webp";
 import Heading from "./ui/Heading";
 import leaficon from "../assets/icons/monstera.png";
 

@@ -1,10 +1,10 @@
 
-import tea from "../assets/images/ingredients/tea.png";
-import sugar from "../assets/images/ingredients/sugar.png";
-import botanical from "../assets/images/ingredients/botanical.png";
-import scoby from "../assets/images/ingredients/scope.png";
+import tea from "../assets/images/ingredients/tea.webp";
+import sugar from "../assets/images/ingredients/sugar.webp";
+import botanical from "../assets/images/ingredients/botanical.webp";
+import scoby from "../assets/images/ingredients/scope.webp";
 import Heading from "./ui/Heading";
-import customers from "../assets/images/customers.png";
+import customers from "../assets/images/customers.webp";
 import Button from "./ui/Button";
 
 const Ingredients = () => {

@@ -1,7 +1,7 @@
 import { Globe, Facebook, Instagram, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import hopelifelogo from "../assets/images/logo.png";
-import kombuchatag from "../assets/images/Kombucha.png"
+import hopelifelogo from "../assets/images/logo.webp";
+import kombuchatag from "../assets/images/Kombucha.webp"
 
 const Showcase = () => {
   const links = [

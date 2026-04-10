@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import hopelifelogo from "../assets/images/logo.png";
+import hopelifelogo from "../assets/images/logo.webp";
 import { Phone, Menu, X } from "lucide-react";
 
 const Header = () => {

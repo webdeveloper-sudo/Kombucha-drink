@@ -1,4 +1,4 @@
-import hopelifelogo from "../assets/images/logo.png";
+import hopelifelogo from "../assets/images/logo.webp";
 import {
   Instagram,
   Facebook,
@@ -12,6 +12,29 @@ import {
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/kombucha_hope_life/",
+      icon: <Instagram className="w-5 h-5" />,
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=61585303814871",
+      icon: <Facebook className="w-5 h-5" />,
+    },
+    {
+      name: "Twitter",
+      url: "",
+      icon: <Twitter className="w-5 h-5" />,
+    },
+    {
+      name: "Linkedin",
+      url: "",
+      icon: <Linkedin className="w-5 h-5" />,
+    },
+  ];
 
   return (
     <footer className="relative bg-gray-600 text-white pt-24 pb-12 overflow-hidden">
@@ -35,13 +58,15 @@ const Footer = () => {
               vitality.
             </p>
             <div className="flex gap-4">
-              {[Instagram, Facebook, Twitter, Linkedin].map((Icon, i) => (
+              {socialLinks.map((link, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  <Icon size={18} />
+                  {link.icon}
                 </a>
               ))}
             </div>

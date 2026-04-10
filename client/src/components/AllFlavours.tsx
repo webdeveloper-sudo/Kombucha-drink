@@ -4,13 +4,13 @@ import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
-import TurmericImg from "../assets/images/allflavours/Turmeric (1).png";
-import GingerImg from "../assets/images/allflavours/Ginger.png";
-import ElixirImg from "../assets/images/allflavours/Elixir.png";
-import ButterflyPeaImg from "../assets/images/allflavours/Butterfly Pea.png";
-import RoseImg from "../assets/images/allflavours/Rose.png";
-import MintImg from "../assets/images/allflavours/Mint.png";
-import HibiscusImg from "../assets/images/allflavours/Hibiscus.png";
+import TurmericImg from "../assets/images/allflavours/Turmeric (1).webp";
+import GingerImg from "../assets/images/allflavours/Ginger.webp";
+import ElixirImg from "../assets/images/allflavours/Elixir.webp";
+import ButterflyPeaImg from "../assets/images/allflavours/Butterfly Pea.webp";
+import RoseImg from "../assets/images/allflavours/Rose.webp";
+import MintImg from "../assets/images/allflavours/Mint.webp";
+import HibiscusImg from "../assets/images/allflavours/Hibiscus.webp";
 import Heading from "./ui/Heading";
 import Button from "./ui/Button";
 

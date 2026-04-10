@@ -15,6 +15,7 @@ import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
 import Showcase from "./components/Showcase";
 import Outlets from "./components/Outlets";
+import Gallery from "./components/Gallery";
 
 function MainApp() {
   const [showFB, setShowFB] = useState(false);
@@ -43,14 +44,21 @@ function MainApp() {
       <div id="our-story">
         <ManBehindTheMove />
       </div>
-     
+      <hr className="border-gray-300 container mx-auto" />
       <OurCustomers />
+      <hr className="border-gray-300 container mx-auto" />
        <div id="client-says">
         <Testimonial />
       </div>
+      <hr className="border-gray-300 container mx-auto" />
       <div id="outlets">
         <Outlets />
       </div>
+      <hr className="border-gray-300 container mx-auto" />
+      <div id="gallery">
+        <Gallery />
+      </div>
+      <hr className="border-gray-300 container mx-auto" />
       <div id="contact">
         <Contact />
       </div>
