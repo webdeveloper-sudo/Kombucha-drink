@@ -1,5 +1,4 @@
 import Packaging from "../assets/images/packaging.png";
-import flower from "../assets/images/bg/flower.png";
 import Heading from "./ui/Heading";
 import leaficon from "../assets/icons/monstera.png";
 
@@ -14,11 +13,11 @@ const OurCustomers = () => {
         backgroundPosition: "center",
       }}
     >
-      <img
+      {/* <img
         src={flower}
         alt=""
         className="absolute bottom-0 left-0 w-full max-w-full opacity-40 pointer-events-none select-none"
-      />
+      /> */}
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-20 px-6">
         {/* Left Side: Image */}
         <div className="flex-1 py-20 w-full flex justify-center md:justify-end ">
@@ -41,12 +40,12 @@ const OurCustomers = () => {
             title2="Consumers"
             subtitle="Discover"
             textAlignment="left"
-            subtitleColor="text-forest-green"
+            subtitleColor="text-gray-800"
             titleColor="text-gray-800"
           />
 
-          <p className="text-forest-green/70 uppercase text-md tracking-[0.3em] font-medium mb-3">
-            Hope Kombucha is crafted for ,
+          <p className="text-gray-800/70 uppercase text-sm tracking-[0.3em] font-medium mb-3">
+            Hope Life Kombucha is crafted for,
           </p>
 
           <ul className="space-y-4 mb-8 font-body text-[1.15rem] text-[#4A3D36]">
@@ -54,7 +53,7 @@ const OurCustomers = () => {
               <img
                 src={leaficon}
                 alt=""
-                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
               />
               <span className="pt-2">Health-conscious individuals</span>
             </li>
@@ -62,7 +61,7 @@ const OurCustomers = () => {
               <img
                 src={leaficon}
                 alt=""
-                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
               />
               <span className="pt-2">Fitness & gym enthusiasts</span>
             </li>
@@ -70,7 +69,7 @@ const OurCustomers = () => {
               <img
                 src={leaficon}
                 alt=""
-                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
               />
               <span className="pt-2">Working professionals</span>
             </li>
@@ -78,7 +77,7 @@ const OurCustomers = () => {
               <img
                 src={leaficon}
                 alt=""
-                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
               />
               <span className="pt-2">Young adults seeking healthier swaps</span>
             </li>
@@ -86,9 +85,25 @@ const OurCustomers = () => {
               <img
                 src={leaficon}
                 alt=""
-                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
               />
               <span className="pt-2"> Wellness-focused families</span>
+            </li>
+            <li className="flex items-center">
+              <img
+                src={leaficon}
+                alt=""
+                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
+              />
+              <span className="pt-2"> Best Replacement for Soda & Sugary Drinks</span>
+            </li>
+            <li className="flex items-center">
+              <img
+                src={leaficon}
+                alt=""
+                className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
+              />
+              <span className="pt-2"> Well Suited for Kids Parties</span>
             </li>
           </ul>
         </div>

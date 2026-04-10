@@ -4,7 +4,7 @@ const Heading = ({title1, title2, subtitle, textAlignment, titleColor, subtitleC
   return (
     <div>
       {" "}
-      <div className={`text-${textAlignment} mb-12`}>
+      <div className={`text-${textAlignment} mb-8`}>
         <p className={`${subtitleColor}/70 uppercase text-sm tracking-[0.3em] font-medium mb-3`}>
           {subtitle}
         </p>

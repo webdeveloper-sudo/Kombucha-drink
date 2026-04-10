@@ -8,9 +8,9 @@ const Showcase = () => {
     {
       name: "Website",
       url: "https://hopekombucha-agoc.netlify.app/",
-      icon: <Globe className="w-6 h-6 text-forest-green" />,
+      icon: <Globe className="w-6 h-6 text-gray-800" />,
       description: "Explore our premium living probiotic kombucha",
-      gradient: "from-forest-green/10 via-white/40 to-forest-green/10",
+      gradient: "from-light-gray/10 via-white/40 to-light-gray/10",
     },
     {
       name: "Instagram",
@@ -41,7 +41,7 @@ const Showcase = () => {
           opacity: [0.3, 0.6, 0.3],
         }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-[10%] w-64 h-64 bg-forest-green/5 rounded-full blur-3xl"
+        className="absolute top-20 left-[10%] w-64 h-64 bg-light-gray/5 rounded-full blur-3xl"
       />
       <motion.div
         animate={{
@@ -59,18 +59,18 @@ const Showcase = () => {
           initial={{ opacity: 0, y: -20, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-6 rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-white/50 backdrop-blur-md"
+          className="mb-2 rounded-full border border-white/50 backdrop-blur-md"
         >
-          <img src={hopelifelogo} alt="Hope Kombucha Logo" className="w-32 lg:w-40 h-auto" />
+          <img src={hopelifelogo} alt="Hope Kombucha Logo" className="w-52 h-auto" />
         </motion.div>
         <div>
-          <img src={kombuchatag} width={200} alt="" />
+          <img src={kombuchatag} width={180} alt="" />
         </div>
 
-        <div className="w-12 my-4 h-px bg-forest-green/20" />
+        <div className="w-12 my-4 h-px bg-light-gray/20" />
 
         {/* Title Section */}
-         <h2 className={`text-4xl lg:text-6xl font-heading font-semibold text-forest-green`}>
+         <h2 className={`text-4xl lg:text-5xl font-heading font-semibold text-gray-800`}>
           <span className="font-bold italic">Connect with</span> Us
         </h2>
         {/* <motion.div
@@ -79,7 +79,7 @@ const Showcase = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mb-10"
         >
-          <h1 className="text-3xl lg:text-4xl font-heading font-bold text-forest-green mb-2 racking-tight">
+          <h1 className="text-3xl lg:text-4xl font-heading font-bold text-gray-800 mb-2 racking-tight">
             Connect with <span className="italic">Hope</span>
           </h1>
           <p className="text-text-dark/60 font-body text-sm lg:text-base tracking-wide max-w-xs mx-auto">
@@ -110,7 +110,7 @@ const Showcase = () => {
                   {link.icon}
                 </div>
                 <div className="text-left">
-                  <span className="text-xl font-semibold text-forest-green group-hover:text-fern-green transition-colors">
+                  <span className="text-xl font-semibold text-gray-800 group-hover:text-gray-800-muted transition-colors">
                     {link.name}
                   </span>
                   <p className="text-sm text-gray-800 font-body">
@@ -119,7 +119,7 @@ const Showcase = () => {
                 </div>
               </div>
 
-              <div className="relative z-10 p-2 text-forest-green/30 group-hover:text-forest-green transition-all duration-300 transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+              <div className="relative z-10 p-2 text-gray-800/30 group-hover:text-gray-800 transition-all duration-300 transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
                 <ArrowUpRight className="w-5 h-5" />
               </div>
             </motion.a>
@@ -133,16 +133,16 @@ const Showcase = () => {
           transition={{ duration: 1, delay: 1 }}
           className="mt-16 flex flex-col items-center gap-4 text-center"
         >
-          <div className="w-12 h-px bg-forest-green/20" />
-          <p className="text-[10px] uppercase tracking-[0.3em] font-medium text-forest-green/40">
+          <div className="w-12 h-px bg-light-gray/20" />
+          <p className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-800/40">
             Crafted with Patience & Purpose
           </p>
         </motion.div>
       </div>
 
       {/* Aesthetic Accents */}
-      <div className="fixed top-0 right-0 w-full h-1 bg-gradient-to-r from-forest-green via-gold to-forest-green opacity-30" />
-      <div className="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-forest-green via-gold to-forest-green opacity-30" />
+      <div className="fixed top-0 right-0 w-full h-1 bg-gradient-to-r from-light-gray via-gold to-light-gray opacity-30" />
+      <div className="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-light-gray via-gold to-light-gray opacity-30" />
     </div>
   );
 };

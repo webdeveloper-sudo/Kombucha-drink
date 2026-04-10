@@ -21,7 +21,7 @@ const Contact = () => {
             subtitle="Connect"
             textAlignment="left"
             titleColor="text-gray-800"
-            subtitleColor="text-forest-green"
+            subtitleColor="text-gray-800"
           />
 
           <p className="text-gray-600 text-lg font-body mb-10 mt-2">
@@ -35,7 +35,7 @@ const Contact = () => {
           
 
             <div
-              className="flex items-center gap-6 group bg-forest-green px-8 py-4"
+              className="flex items-center gap-6 group bg-light-gray px-8 py-4"
               style={{
                 borderTopLeftRadius: "30px",
                 borderBottomLeftRadius: "0px",
@@ -43,21 +43,21 @@ const Contact = () => {
                 borderTopRightRadius: "0px",
               }}
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange text-white group-hover:bg-orange group-hover:text-white transition-all duration-300 shadow-sm">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-brand-purple text-white group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 shadow-sm">
                 <Phone size={26} />
               </div>
               <div>
-                <h4 className="text-white font-bold text-xl font-heading mb-1">
+                <h4 className="text-gray-800 font-bold text-xl font-heading mb-1">
                   Enquire Us
                 </h4>
-                <span className="text-white/90 font-body text-md">
+                <span className="text-gray-800  font-body text-md">
                   +91 72005 04628
                 </span>
               </div>
             </div>
 
             <div
-              className="flex items-center gap-6 group bg-forest-green px-8 py-4"
+              className="flex items-center gap-6 group bg-light-gray px-8 py-4"
               style={{
                 borderTopLeftRadius: "30px",
                 borderBottomLeftRadius: "0px",
@@ -65,20 +65,20 @@ const Contact = () => {
                 borderTopRightRadius: "0px",
               }}
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange text-white group-hover:bg-orange group-hover:text-white transition-all duration-300 shadow-sm">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-brand-purple text-white group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 shadow-sm">
                 <Mail size={26} />
               </div>
               <div>
-                <h4 className="text-white font-bold text-xl font-heading mb-1">
+                <h4 className="text-gray-800 font-bold text-xl font-heading mb-1">
                    Enquire Us
                 </h4>
-                <span className="text-white/90 font-body text-md">
+                <span className="text-gray-800  font-body text-md">
                   vp.expansions@hopemarket.in
                 </span>
               </div>
             </div>
               <div
-              className="flex items-center gap-6 group bg-forest-green px-8 py-4"
+              className="flex items-center gap-6 group bg-light-gray px-8 py-4"
               style={{
                 borderTopLeftRadius: "30px",
                 borderBottomLeftRadius: "0px",
@@ -86,14 +86,14 @@ const Contact = () => {
                 borderTopRightRadius: "0px",
               }}
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange text-white group-hover:bg-orange group-hover:text-white transition-all duration-300 shadow-sm">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-brand-purple text-white group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 shadow-sm">
                 <MapPin size={26} />
               </div>
               <div>
-                <h4 className="text-white font-bold text-xl font-heading mb-1">
+                <h4 className="text-gray-800 font-bold text-xl font-heading mb-1">
                   Reach Us
                 </h4>
-                <span className="text-white/90 font-body text-md">
+                <span className="text-gray-800  font-body text-md">
                   Marie Oulgaret, Auroville Road, Pondicherry - 605111, India
                 </span>
               </div>
@@ -105,7 +105,7 @@ const Contact = () => {
         <div className="w-full lg:w-1/2 ">
           {/* The Contact Form Container */}
           <div
-            className="bg-[#FAF8F5] border border-forest-green w-full p-8 sm:p-10 shadow-xl relative z-20"
+            className="bg-[#FAF8F5] border border-light-gray w-full p-8 sm:p-10 shadow-xl relative z-20"
             style={{
               borderTopLeftRadius: "60px",
               borderBottomLeftRadius: "0px",
@@ -116,7 +116,7 @@ const Contact = () => {
             <h3 className="text-3xl font-heading font-bold text-gray-800 mb-8 flex items-center gap-3">
               <img
                 src={leaficon}
-                className="w-8 h-8 rounded-full bg-orange p-1"
+                className="w-8 h-8 rounded-full bg-brand-purple p-1"
                 alt="leaf icon"
               />
               Send Us a Message
@@ -126,31 +126,31 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange focus:bg-white/15 transition-all outline-none"
+                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:bg-white/15 transition-all outline-none"
                 />
               </div>
               <div className="flex items-center gap-2">
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange focus:bg-white/15 transition-all outline-none"
+                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:bg-white/15 transition-all outline-none"
                 />
                 <input
                   type="mobile"
                   placeholder="Your Mobile"
-                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange focus:bg-white/15 transition-all outline-none"
+                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:bg-white/15 transition-all outline-none"
                 />
               </div>
               <div>
                 <textarea
                   rows={4}
                   placeholder="Your Message"
-                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange focus:bg-white/15 transition-all resize-none outline-none"
+                  className="w-full bg-white/10 border border-gray-400 text-gray-800 placeholder-gray-600 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-brand-purple focus:bg-white/15 transition-all resize-none outline-none"
                 ></textarea>
               </div>
               <button
                 type="button"
-                className="group flex items-center justify-center gap-3 bg-orange uppercase text-sm lg:text-[14px] tracking-[0.2em] rounded-full text-white/80 font-medium px-6 py-3.5"
+                className="group flex items-center justify-center gap-3 bg-brand-purple uppercase text-sm lg:text-[14px] tracking-[0.2em] rounded-full text-white font-medium px-6 py-3.5"
               >
                 Submit Now
                 <Send

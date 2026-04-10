@@ -195,7 +195,7 @@ function Hero() {
         <div className="h-full flex flex-col justify-between col-span-1 pt-16 lg:pt-24">
           <div>
             <p className="text-white/70 uppercase text-xs lg:text-md tracking-[0.3em] font-medium mb-4">
-              Welcome to AGOC
+              Welcome to Hope Life
             </p>
             <h1 className="text-white font-heading text-5xl lg:text-7xl font-light leading-tight drop-shadow-lg">
               Premium <br />

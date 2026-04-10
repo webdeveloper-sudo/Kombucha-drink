@@ -7,7 +7,7 @@
   --turmeric-secondary: #78350f;
   --ginger-primary: #eab308;
   --ginger-secondary: #991b1b;
-  --elixir-primary: #a855f7;
+  --elixir-primary: #f7c52f;
   --elixir-secondary: #500724;
   --pea-primary: #6366f1;
   --pea-secondary: #0f172a;
@@ -19,8 +19,8 @@
   --hibiscus-secondary: #4c0519;
 }
 @theme {
-  --color-forest-green: #1B4D3E;
-  --color-fern-green: #4A7C59;
+  --color-light-gray: #E6E6E6;
+  --color-light-gray-muted: #E3E3E3;
   --color-sage: #9CAF88;
   --color-gold: #8B7355;
   --color-cream: #FAF8F5;
@@ -32,7 +32,7 @@
   --color-indigo: #3B5998;
   --color-rose: #C4849A;
   --color-yellow: #FEA800;
-  --color-orange: #FF852C;
+  --color-brand-purple: #611082;
   --color-sandal: #D6BA8C;
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;

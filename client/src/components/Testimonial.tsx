@@ -50,8 +50,8 @@ const Testimonial = () => {
   return (
     <div id="testimonials" className="py-20 bg-[#FAF8F5] relative overflow-hidden">
       {/* Optional decorative background circle */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FF852C]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#1B4D3E]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#611082]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#E6E6E6]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         {/* Section Header */}
@@ -62,7 +62,7 @@ const Testimonial = () => {
             subtitle="What people say" 
             textAlignment="center" 
             titleColor="text-gray-800" 
-            subtitleColor="text-forest-green" 
+            subtitleColor="text-gray-800" 
           />
         </div>
 
@@ -70,14 +70,14 @@ const Testimonial = () => {
         <div className="relative w-full">
           <style>{`
             .testimonial-pagination .swiper-pagination-bullet {
-              background: #4A7C59;
+              background: #868686ff;
               opacity: 0.5;
               width: 10px;
               height: 10px;
               transition: all 0.3s ease;
             }
             .testimonial-pagination .swiper-pagination-bullet-active {
-              background: #1B4D3E;
+              background: #4e4e4eff;
               opacity: 1;
               width: 24px;
               border-radius: 8px;
@@ -99,10 +99,10 @@ const Testimonial = () => {
           >
             {testimonials.map((testi) => (
               <SwiperSlide key={testi.id} className="h-auto">
-                <div className="h-full bg-white rounded-[2rem] p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(27,77,62,0.1)] transition-all duration-300 border border-gray-100 flex flex-col items-center text-center group">
+                <div className="h-full bg-white rounded-md p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(27,77,62,0.1)] transition-all duration-300 border border-gray-300 flex flex-col items-center text-center group">
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-[#1B4D3E]/10 rounded-full flex items-center justify-center group-hover:-translate-y-2 transition-all duration-300 group-hover:shadow-lg">
-                      <QuoteIcon size={24} className="text-[#1B4D3E]/80" fill="currentColor" />
+                    <div className="w-16 h-16 bg-[#E6E6E6]/10 rounded-full flex items-center justify-center group-hover:-translate-y-2 transition-all duration-300 group-hover:shadow-lg">
+                      <QuoteIcon size={24} className="text-brand-purple" fill="currentColor" />
                     </div>
                   </div>
                   
@@ -120,7 +120,7 @@ const Testimonial = () => {
                     <h4 className="font-heading text-xl md:text-2xl font-bold text-gray-800 mb-1">
                       {testi.name}
                     </h4>
-                    <p className="text-[#FF852C] text-[12px] tracking-widest uppercase font-semibold">
+                    <p className="text-[#611082] text-[12px] tracking-widest uppercase font-semibold">
                       {testi.role}
                     </p>
                   </div>

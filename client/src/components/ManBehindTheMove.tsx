@@ -5,14 +5,14 @@ import leaficon from "../assets/icons/monstera.png";
 const ManBehindTheMove = () => {
   return (
     <section
-      className="py-20"
-      style={{
-        backgroundImage: "url('/src/assets/images/bg/pattern.svg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "repeat-y",
-        opacity: 1,
-      }}
+      className="py-20 bg-white"
+      // style={{
+      //   backgroundImage: "url('/src/assets/images/bg/pattern.svg')",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "repeat-y",
+      //   opacity: 1,
+      // }}
     >
       <div className="container mx-auto">
         <Heading
@@ -20,11 +20,11 @@ const ManBehindTheMove = () => {
           title2="Behind the Move"
           subtitle="Discover"
           textAlignment="center"
-          titleColor="text-forest-green"
-          subtitleColor="text-white"
+          titleColor="text-gray-800"
+          subtitleColor="text-gray-800"
         />
         <div
-          className="bg-forest-green md:max-w-7xl max-w-full mx-auto z-10 md:px-20 px-10 py-6 pt-8"
+          className="bg-light-gray md:max-w-7xl max-w-full mx-auto z-10 md:px-20 px-10 py-6 pt-8"
           style={{
             borderTopLeftRadius: "120px",
             borderBottomLeftRadius: "0px",
@@ -34,12 +34,12 @@ const ManBehindTheMove = () => {
         >
           
           {/* Content Section */}
-          <div className="text-lg md:text-[18px] text-white/90 space-y-8 font-body leading-[1.85] drop-shadow-md">
-            <ul className="space-y-4 mb-4 font-body text-[1.15rem] mx-auto max-w-4xl text-white/90">
-            <p className="text-xl text-left md:text-4xl mb-10 mt-5 uppercase font-heading font-semibold leading-relaxed text-white/90 max-w-[90%]">
+          <div className="text-lg md:text-[18px] text-gray space-y-8 font-body leading-[1.85] drop-shadow-md">
+            <ul className="space-y-4 mb-4 font-body text-[1.15rem] mx-auto max-w-4xl text-gray-800">
+            <p className="text-xl text-left md:text-4xl mb-10 mt-5 uppercase font-heading font-semibold leading-relaxed text-gray-800 max-w-[90%]">
             <span className=" font-bold">Dr. Arawindhan J</span>
             <p
-              className={`text-white/80 uppercase text-sm tracking-[0.3em] font-medium mb-3`}
+              className={`text-gray-800 uppercase text-sm tracking-[0.3em] font-medium mb-3`}
             >
               Founder & Visionary - Hope Kombucha
             </p>
@@ -48,12 +48,12 @@ const ManBehindTheMove = () => {
                 <img
                   src={leaficon}
                   alt=""
-                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
                 />
                 <span className="pt-2">
                   {" "}
                   Hope Kombucha was founded in 2021 by{" "}
-                  <span className="font-bold text-white underline underline-offset-6 decoration-orange decoration-2">
+                  <span className="font-bold text-gray-800 underline underline-offset-6 decoration-brand-purple decoration-2">
                     Dr. Arawindhan J
                   </span>{" "}
                   with a clear belief - India deserves a safer, smarter
@@ -64,7 +64,7 @@ const ManBehindTheMove = () => {
                 <img
                   src={leaficon}
                   alt=""
-                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
                 />
                 <span className="pt-2">
                   {" "}
@@ -77,7 +77,7 @@ const ManBehindTheMove = () => {
                 <img
                   src={leaficon}
                   alt=""
-                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#FF852C] p-1 flex-shrink-0"
+                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
                 />
                 <span className="pt-2">
                   {" "}
@@ -108,7 +108,7 @@ const ManBehindTheMove = () => {
             </div>
           </div>
 
-          <QuoteIcon size={80} className="text-[#FF852C]/90 ms-auto mb-2" />
+          <QuoteIcon size={80} className="text-[#611082]/90 ms-auto mb-2" />
         </div>
       </div>
     </section>

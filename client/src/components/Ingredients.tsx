@@ -11,18 +11,18 @@ const Ingredients = () => {
   const ingredients = [
     {
       image: tea,
-      title: "Premium Tea Leaves",
+      title: "Organic Green Tea",
       subtext: "sourced from organic farms",
     },
     {
       image: sugar,
-      title: "Measured Natural Sugar",
+      title: "Organic Brown Sugar",
       subtext: "for fermentaion only",
     },
     {
       image: botanical,
       title: "Natural Botanical Infusions",
-      subtext: "organic herbs and spices",
+      subtext: "fresh flowers and fresh roots",
     },
     {
       image: scoby,
@@ -42,10 +42,10 @@ const Ingredients = () => {
           <Heading
             title1="Core"
             title2="Ingredients"
-            subtitle="Hope kombucha"
+            subtitle="Hope Life kombucha"
             textAlignment="left"
             titleColor="text-gray-800"
-            subtitleColor="text-forest-green"
+            subtitleColor="text-gray-800"
           />
 
           <div className="space-y-6">
@@ -56,7 +56,7 @@ const Ingredients = () => {
                 <img
                   src={ingredient.image}
                   alt={ingredient.title}
-                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-26 md:h-26 border border-3 border-orange rounded-full shadow-[0_10px_15px_rgba(0,0,0,0.15),inset_0_2px_4px_rgba(255,255,255,0.6)] object-contain flex-shrink-0"
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-26 md:h-26 border border-3 border-brand-purple rounded-full shadow-[0_10px_15px_rgba(0,0,0,0.15),inset_0_2px_4px_rgba(255,255,255,0.6)] object-contain flex-shrink-0"
                 />
 
                 {/* TEXT */}

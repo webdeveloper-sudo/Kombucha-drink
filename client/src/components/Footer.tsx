@@ -7,14 +7,14 @@ import {
   MapPin,
   Phone,
   Mail,
-  ArrowRight,
+
 } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-forest-green text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-gray-600 text-white pt-24 pb-12 overflow-hidden">
 
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -29,7 +29,7 @@ const Footer = () => {
                 height={80}
               />
             </div>
-            <p className="text-white/70 mb-6 font-body leading-relaxed max-w-xs">
+            <p className="text-white mb-6 font-body leading-relaxed max-w-xs">
               Crafting premium kombucha with traditional methods and modern
               wellness in mind. Every bottle is a promise of health and
               vitality.
@@ -39,7 +39,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1"
                 >
                   <Icon size={18} />
                 </a>
@@ -52,7 +52,7 @@ const Footer = () => {
             <h4 className="text-2xl font-heading font-bold text-white tracking-wide">
               Explore
             </h4>
-            <ul className="space-y-3 font-body text-white/70">
+            <ul className="space-y-3 font-body text-white">
               {[
                 "Shop",
                 "Our Story",
@@ -64,9 +64,9 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="hover:text-[#FF852C] text-white/70 transition-colors flex items-center gap-2 group"
+                    className="hover:text-[#611082] text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#FF852C] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1 h-1 bg-[#611082] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link}
                   </a>
                 </li>
@@ -79,23 +79,23 @@ const Footer = () => {
             <h4 className="mb-6 text-2xl text-white font-heading font-bold tracking-wide">
               Get in Touch
             </h4>
-            <ul className="space-y-2 mb-3 font-body text-white/70">
+            <ul className="space-y-2 mb-3 font-body text-white">
              
               <li className="flex gap-4 items-center">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1">
                   <Phone className="w-5 h-5" />
                 </div>
                 <span>+91 72005 04628</span>
               </li>
 
               <li className="flex gap-4 items-center">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1">
                   <Mail className="w-10 h-5" />
                 </div>
                 <span>vp.expansions@hopemarket.in</span>
               </li>
                <li className="flex gap-4 items-start">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#FF852C] hover:border-[#FF852C] transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1">
                   <MapPin className="w-10 h-5" />
                 </div>
                 <span>Marie Oulgaret, Auroville Road, Pondicherry - 605111, India</span>
@@ -106,23 +106,23 @@ const Footer = () => {
             {/* <h4 className="text-2xl text-white font-heading font-bold tracking-wide">
               Stay Updated
             </h4> */}
-            <span className="text-white/70  font-body text-sm">
+            {/* <span className="text-white  font-body text-sm">
               Stay Connected with us !
             </span>
             <form className="relative group mt-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full bg-white/10 border border-white/20 rounded-full py-3 px-6 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF852C] focus:bg-white/20 transition-all placeholder:text-white/40"
+                className="w-full bg-white/10 border border-white/20 rounded-full py-3 px-6 text-sm focus:outline-none focus:ring-2 focus:ring-[#611082] focus:bg-white/20 transition-all placeholder:text-white/40"
               />
               <button
                 type="submit"
-                className="absolute right-1 top-1 w-10 h-10 flex items-center justify-center bg-[#FF852C] text-white rounded-full hover:bg-[#ff9a52] transition-colors"
+                className="absolute right-1 top-1 w-10 h-10 flex items-center justify-center bg-[#611082] text-white rounded-full hover:bg-[#75149c] transition-colors"
                 aria-label="Subscribe"
               >
                 <ArrowRight size={18} />
               </button>
-            </form>
+            </form> */}
           </div>
 
           {/* Column 4: Location Map */}
@@ -167,7 +167,7 @@ const Footer = () => {
       </div>
 
       {/* Subtle organic background decoration */}
-      <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#FF852C] opacity-10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#611082] opacity-10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -top-24 -left-24 w-48 h-48 bg-white opacity-5 rounded-full blur-3xl pointer-events-none" />
     </footer>
   );

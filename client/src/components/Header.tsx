@@ -15,7 +15,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll); // Cleanup
   }, []);
 
-  const navLinks = [ "Our Story", "Our Flavours", "Client Says", "Contact"];
+  const navLinks = [ "Our Story", "Our Flavours", "Client Says", "Outlets", "Contact"];
 
   return (
     <header
@@ -26,7 +26,7 @@ const Header = () => {
       }`}
     >
       <div className="text-white text-2xl bg-white rounded-full border border-gray-400 font-heading font-medium tracking-[0.2em] uppercase drop-shadow-md relative z-50">
-        <img src={hopelifelogo} alt="Logo" width={100} />
+        <img src={hopelifelogo} alt="Logo" width={140} />
       </div>
 
       {/* Desktop Navigation */}
@@ -35,7 +35,7 @@ const Header = () => {
           <a
             key={item}
             href={`#${item.toLowerCase().replace(" ", "-")}`}
-            className={` ${isScrolled ? "text-forest-green/80 font-bold hover:underline hover:underline-offset-8 hover:decoration-orange decoration-1" : "text-white/80 font-medium hover:underline hover:underline-offset-8 hover:decoration-white"} uppercase text-xs lg:text-sm tracking-[0.2em]  transition-colors `}
+            className={` ${isScrolled ? "text-gray-800/80 font-bold hover:underline hover:underline-offset-8 hover:decoration-brand-purple decoration-1" : "text-white/80 font-medium hover:underline hover:underline-offset-8 hover:decoration-white"} uppercase text-xs lg:text-sm tracking-[0.2em]  transition-colors `}
           >
             {item}
           </a>
@@ -43,7 +43,7 @@ const Header = () => {
 
         <a
           href="#flavours"
-          className={` ${isScrolled ? "text-white/80 py-3 font-bold bg-[#FF852C]" : "text-white/80 font-medium "} flex gap-2 rounded-full border border-gray-300 py-2 px-3 items-center max-w-fit uppercase text-xs lg:text-md tracking-[0.2em] `}
+          className={` ${isScrolled ? "text-white/80 py-3 font-bold bg-[#611082]" : "text-white/80 font-medium "} flex gap-2 rounded-full border border-gray-300 py-2 px-3 items-center max-w-fit uppercase text-xs lg:text-md tracking-[0.2em] `}
         >
            <Phone className="w-4 h-4" /> +91 72005 04628
         </a>
@@ -51,7 +51,7 @@ const Header = () => {
 
       {/* Mobile Menu Icon */}
       <button
-        className={`md:hidden relative z-50 ${isScrolled || isMenuOpen ? "text-forest-green/80 font-bold" : "text-white/80 font-medium "}`}
+        className={`md:hidden relative z-50 ${isScrolled || isMenuOpen ? "text-gray-800/80 font-bold" : "text-white/80 font-medium "}`}
         aria-label="Menu"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
@@ -66,7 +66,7 @@ const Header = () => {
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
               onClick={() => setIsMenuOpen(false)}
-              className="text-forest-green/80 font-bold uppercase text-sm tracking-[0.2em] py-2 border-b border-gray-50 last:border-none"
+              className="text-gray-800/80 font-bold uppercase text-sm tracking-[0.2em] py-2 border-b border-gray-50 last:border-none"
             >
               {item}
             </a>
@@ -74,7 +74,7 @@ const Header = () => {
           <a
             href="#flavours"
             onClick={() => setIsMenuOpen(false)}
-            className="text-white/80 py-3 font-bold bg-[#FF852C] flex gap-2 rounded-full border border-gray-300 px-4 items-center max-w-fit uppercase text-xs tracking-[0.2em] mt-2"
+            className="text-white/80 py-3 font-bold bg-[#611082] flex gap-2 rounded-full border border-gray-300 px-4 items-center max-w-fit uppercase text-xs tracking-[0.2em] mt-2"
           >
              <Phone className="w-4 h-4" /> +91 72005 04628
           </a>

@@ -2,8 +2,7 @@ import nocolour from "../assets/images/specalites/no-colours.png";
 import noadditives from "../assets/images/specalites/no-additives.png";
 import nopreservatives from "../assets/images/specalites/no-preserves.png";
 import Heading from "./ui/Heading";
-import flower from "../assets/images/bg/flower.png";
-
+ 
 const OurCraftmanship = () => {
   const cards = [
     {
@@ -31,11 +30,11 @@ const OurCraftmanship = () => {
       }}
     >
       {/* 🌸 Flower */}
-      <img
+      {/* <img
         src={flower}
         alt=""
         className="absolute bottom-0 left-0 w-full max-w-full opacity-30 pointer-events-none z-0"
-      />
+      /> */}
 
       {/* CONTENT */}
       <div className="relative z-10">
@@ -46,7 +45,7 @@ const OurCraftmanship = () => {
           subtitle="Discover"
           textAlignment="center"
           titleColor="text-gray-800"
-          subtitleColor="text-forest-green"
+          subtitleColor="text-gray-800"
         />
 
         {/* cards */}
@@ -54,7 +53,7 @@ const OurCraftmanship = () => {
           {cards.map((card, index) => (
             <div key={index} className="flex flex-col items-center">
               <div
-                className="w-36 h-36 rounded-full bg-orange p-1 
+                className="w-36 h-36 rounded-full bg-brand-purple p-1 
   shadow-[0_10px_25px_rgba(0,0,0,0.15),inset_0_2px_4px_rgba(255,255,255,0.6)]"
               >
                 <div className="w-full h-full rounded-full overflow-hidden shadow-inner">
@@ -66,7 +65,7 @@ const OurCraftmanship = () => {
                 </div>
               </div>
               <div
-                className="bg-forest-green mt-6 py-4 px-4 w-full"
+                className="bg-light-gray mt-6 py-4 border border-gray-400 px-4 w-full"
                 style={{
                   borderTopLeftRadius: "30px",
                   borderBottomLeftRadius: "0px",
@@ -74,7 +73,7 @@ const OurCraftmanship = () => {
                   borderTopRightRadius: "0px",
                 }}
               >
-                <h3 className="text-[18px]  font-bold uppercase tracking-[0.1em] text-white">
+                <h3 className="text-[18px]  font-bold uppercase tracking-[0.1em] text-gray-800">
                   {card.title}
                 </h3>
               </div>

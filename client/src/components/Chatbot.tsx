@@ -710,10 +710,10 @@ const Chatbot = () => {
             className="w-[320px] sm:w-[390px] bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 mb-4"
           >
             {/* Header */}
-            <div className="bg-[#1B4D3E] px-5 py-4 flex items-center justify-between text-white">
+            <div className="bg-[#E6E6E6] px-5 py-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full  bg-white/20 flex items-center justify-center">
-                  <Bot size={22} className="text-[#FF852C]" />
+                  <Bot size={22} className="text-[#611082]" />
                 </div>
                 <div>
                   <h3 className="font-bold text-base leading-tight">
@@ -746,14 +746,14 @@ const Chatbot = () => {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} items-end gap-2`}
                 >
                   {msg.role === "bot" && (
-                    <div className="w-7 h-7 rounded-full bg-[#1B4D3E] flex items-center justify-center flex-shrink-0 mb-0.5">
-                      <Bot size={14} className="text-[#FF852C]" />
+                    <div className="w-7 h-7 rounded-full bg-[#E6E6E6] flex items-center justify-center flex-shrink-0 mb-0.5">
+                      <Bot size={14} className="text-[#611082]" />
                     </div>
                   )}
                   <div
                     className={`max-w-[78%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed shadow-sm whitespace-pre-line ${
                       msg.role === "user"
-                        ? "bg-[#1B4D3E] text-white rounded-br-sm"
+                        ? "bg-[#E6E6E6] text-white rounded-br-sm"
                         : "bg-white border border-gray-100 text-gray-800 rounded-bl-sm"
                     }`}
                   >
@@ -763,21 +763,21 @@ const Chatbot = () => {
               ))}
               {isTyping && (
                 <div className="flex items-end gap-2">
-                  <div className="w-7 h-7 rounded-full bg-[#1B4D3E] flex items-center justify-center flex-shrink-0">
-                    <Bot size={14} className="text-[#FF852C]" />
+                  <div className="w-7 h-7 rounded-full bg-[#E6E6E6] flex items-center justify-center flex-shrink-0">
+                    <Bot size={14} className="text-[#611082]" />
                   </div>
                   <div className="bg-white border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
                     <div className="flex gap-1 items-center">
                       <span
-                        className="w-2 h-2 bg-[#1B4D3E]/40 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-[#E6E6E6]/40 rounded-full animate-bounce"
                         style={{ animationDelay: "0ms" }}
                       />
                       <span
-                        className="w-2 h-2 bg-[#1B4D3E]/40 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-[#E6E6E6]/40 rounded-full animate-bounce"
                         style={{ animationDelay: "150ms" }}
                       />
                       <span
-                        className="w-2 h-2 bg-[#1B4D3E]/40 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-[#E6E6E6]/40 rounded-full animate-bounce"
                         style={{ animationDelay: "300ms" }}
                       />
                     </div>
@@ -792,7 +792,7 @@ const Chatbot = () => {
                 <button
                   key={qr}
                   onClick={() => handleSend(qr)}
-                  className="flex-shrink-0 text-xs px-3 py-1.5 rounded-full border border-[#1B4D3E]/20 text-[#1B4D3E] bg-[#1B4D3E]/5 hover:bg-[#1B4D3E]/10 transition font-medium"
+                  className="flex-shrink-0 text-xs px-3 py-1.5 rounded-full border border-[#E6E6E6]/20 text-[#E6E6E6] bg-[#E6E6E6]/5 hover:bg-[#E6E6E6]/10 transition font-medium"
                 >
                   {qr}
                 </button>
@@ -806,12 +806,12 @@ const Chatbot = () => {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                  className="flex-grow bg-slate-100 rounded-full px-4 py-2.5 text-sm outline-none ring-1 focus:ring-2 ring-[#1B4D3E]/30 transition"
+                  className="flex-grow bg-slate-100 rounded-full px-4 py-2.5 text-sm outline-none ring-1 focus:ring-2 ring-[#E6E6E6]/30 transition"
                   placeholder="Ask about Hope Kombucha..."
                 />
                 <button
                   onClick={() => handleSend()}
-                  className="bg-[#FF852C] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#e6731e] transition shadow-sm flex-shrink-0"
+                  className="bg-[#611082] text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#e6731e] transition shadow-sm flex-shrink-0"
                 >
                   <Send size={16} />
                 </button>
@@ -826,7 +826,7 @@ const Chatbot = () => {
         onClick={() => setIsOpen(!isOpen)}
         whileTap={{ scale: 0.92 }}
         whileHover={{ scale: 1.05 }}
-        className="w-16 h-16 rounded-full bg-[#FF852C] text-white flex items-center justify-center shadow-xl border border-gray-50"
+        className="w-16 h-16 rounded-full bg-[#611082] text-white flex items-center justify-center shadow-xl border border-gray-50"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
