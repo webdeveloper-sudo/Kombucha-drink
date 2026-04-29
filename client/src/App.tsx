@@ -16,6 +16,9 @@ import Testimonial from "./components/Testimonial";
 import Showcase from "./components/Showcase";
 import Outlets from "./components/Outlets";
 import Gallery from "./components/Gallery";
+import ValentinoHolt from "./components/ValentinoHolt";
+import BottlesRow from "./components/ui/BottlesRow";
+
 
 function MainApp() {
   const [showFB, setShowFB] = useState(false);
@@ -36,28 +39,39 @@ function MainApp() {
       <div id="our-flavours">
         <AllFlavours />
       </div>
-      <hr className="border-gray-300 container mx-auto" />
+      {/* <hr className="border-gray-300 container mx-auto" /> */}
       <HopeKombuchaFits />
-      <OurCraftmanship />
+
+    
       <Ingredients />
-      <hr className="border-gray-300 container mx-auto" />
+      {/* <hr className="border-gray-300 container mx-auto" /> */}
+        <OurCraftmanship />
       <div id="our-story">
         <ManBehindTheMove />
       </div>
-      <hr className="border-gray-300 container mx-auto" />
+      
+      {/* <hr className="border-gray-300 container mx-auto" /> */}
       <OurCustomers />
-      <hr className="border-gray-300 container mx-auto" />
-       <div id="client-says">
-        <Testimonial />
-      </div>
-      <hr className="border-gray-300 container mx-auto" />
+      {/* <hr className="border-gray-300 container mx-auto" /> */}
+            <BottlesRow />
+
+      
+      {/* <hr className="border-gray-300 container mx-auto" /> */}
+       
       <div id="outlets">
         <Outlets />
       </div>
-      <hr className="border-gray-300 container mx-auto" />
+       <div id="valentino-story">
+        <ValentinoHolt />
+      </div>
+      {/* <hr className="border-gray-300 container mx-auto" /> */}
       <div id="gallery">
         <Gallery />
       </div>
+      <div id="client-says">
+        <Testimonial />
+      </div>
+      {/* <hr className="border-gray-300 container mx-auto" /> */}
       <hr className="border-gray-300 container mx-auto" />
       <div id="contact">
         <Contact />

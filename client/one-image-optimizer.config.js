@@ -15,7 +15,7 @@
 
 module.exports = {
   // 👇 CHANGE THIS to your images root folder path
-  ROOT_FOLDER: "./src/assets/images",
+  ROOT_FOLDER: "./src/assets/images/Elements",
 
   // Compression settings
   COMPRESS_THRESHOLD_MB: 1, // Compress images larger than this

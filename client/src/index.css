@@ -3,18 +3,18 @@
 
 :root {
   /* Product specific gradient colors explicitly available to JS */
-  --turmeric-primary: #f97316;
-  --turmeric-secondary: #78350f;
-  --ginger-primary: #eab308;
-  --ginger-secondary: #991b1b;
-  --elixir-primary: #f7c52f;
-  --elixir-secondary: #500724;
+  --turmeric-primary: #FFD627;
+  --turmeric-secondary: #C9941D;
+  --ginger-primary: #DFD28B;
+  --ginger-secondary: #eab308;
+  --elixir-primary: #FED679;
+  --elixir-secondary: #f7c248;
   --pea-primary: #6366f1;
   --pea-secondary: #0f172a;
-  --rose-primary: #ec4899;
-  --rose-secondary: #7f1d1d;
-  --mint-primary: #10b981;
-  --mint-secondary: #064e3b;
+  --rose-primary: #FA98AE;
+  --rose-secondary: #ec4899;
+  --mint-primary: #98D865;
+  --mint-secondary: #10b981;
   --hibiscus-primary: #ef4444;
   --hibiscus-secondary: #4c0519;
 }
@@ -22,7 +22,7 @@
   --color-light-gray: #E6E6E6;
   --color-light-gray-muted: #E3E3E3;
   --color-sage: #9CAF88;
-  --color-gold: #8B7355;
+  --color-gold: #FFD600 ;
   --color-cream: #FAF8F5;
   --color-text-dark: #2D3A35;
   --color-text-light: #F5F3EF;
@@ -233,4 +233,11 @@
     --font-size-4xl: 2rem;
     --font-size-3xl: 1.5rem;
   }
+}
+
+.bg-fizzy{
+  background-image: url("../src/assets/images/bg/27708569_beer_foam_hor_06_1_03.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

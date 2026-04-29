@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gray-600 text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-gray-500 text-white pt-24 pb-12 overflow-hidden">
 
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">

@@ -90,17 +90,17 @@ const AllFlavours = () => {
       : filteredProducts;
 
   return (
-    <div id="flavours" className="py-20 bg-slate-50 flex flex-col items-center">
+    <div id="flavours" className="py-20 bg-white flex flex-col items-center" >
       {/* Inline Styles specifically for Swiper overlap */}
       <style>{`
         .custom-swiper-pagination-bullet-active {
           opacity: 1;
-          background: #E6E6E6; /* light-gray */
+          background: #FFD600; /* gold */
           width: 15px;
           height: 15px;
         }
         .custom-swiper-pagination-bullet {
-          background: #E3E3E3;
+          background: #FFD600;
           width: 13px;
           height: 13px;
         }
@@ -162,11 +162,11 @@ const AllFlavours = () => {
       </div> */}
 
       {/* Carousel Container */}
-      <div className="relative w-full container mx-auto flex items-center justify-center  px-2 md:px-8">
+      <div className="relative w-full container mx-auto  flex items-center justify-center  px-2 md:px-8">
         {carouselItems.length > 0 && (
           <button
             onClick={() => swiperRef?.slidePrev()}
-            className="absolute left-2 md:left-8 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 bg-white/80 text-gray-600 font-bold text-xl hover:bg-light-gray hover:border-light-gray hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:-translate-x-1"
+            className="absolute left-2 md:left-8 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 bg-white/80 text-gray-600 font-bold text-xl hover:bg-gold hover:border-gold hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:-translate-x-1"
           >
             {"<"}
           </button>
@@ -200,14 +200,11 @@ const AllFlavours = () => {
             {carouselItems.map((product, index) => (
               <SwiperSlide
                 key={`${product.id}-${index}`}
-                style={{
-                  width: "360px",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
+                className="flex justify-center"
               >
+
                 {/* Premium Glass Card replacing Shadcn UI */}
-                <div className="relative w-full max-w-[500px] h-[520px] overflow-hidden transition-all duration-300 flex flex-col items-center py-10 px-6 group">
+                <div className="relative w-full max-w-[500px] h-[520px] bg-white/40 overflow-hidden transition-all duration-300 flex flex-col items-center py-10 px-6 group">
                   {/* Subtle inner glass highlight */}
                   <div className="absolute inset-0 border border-white/60 rounded-3xl pointer-events-none" />
 
@@ -256,14 +253,14 @@ const AllFlavours = () => {
         {carouselItems.length > 0 && (
           <button
             onClick={() => swiperRef?.slideNext()}
-            className="absolute right-2 md:right-8 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 bg-white/80 text-gray-600 font-bold text-xl hover:bg-light-gray hover:border-light-gray hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:translate-x-1"
+            className="absolute right-2 md:right-8 z-10 w-12 h-12 flex items-center justify-center rounded-full border border-gray-600 bg-white/80 text-gray-600 font-bold text-xl hover:bg-gold hover:border-gold hover:text-white transition duration-300 shadow-md hover:shadow-xl hover:translate-x-1"
           >
             {">"}
           </button>
         )}
       </div>
       <div className="mx-auto py-4">
-          <Button title="order now" href="#contact" variant="secondary" />
+          <Button title="Enquire now" href="#contact" variant="secondary" />
         </div>
     </div>
   );

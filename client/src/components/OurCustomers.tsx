@@ -8,7 +8,7 @@ const OurCustomers = () => {
       className="w-full relative "
       style={{
         backgroundImage: "url('/src/assets/images/bg/graybg.jpg')",
-        backgroundColor: "#F5F5F5",
+        backgroundColor: "#fff",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

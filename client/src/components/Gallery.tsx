@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, X, ZoomIn, ZoomOut, Maximize } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, ZoomIn, ZoomOut } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Heading from './ui/Heading';
 
 // Import all images explicitly for Vite bundling
@@ -17,6 +18,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 const Gallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [showAll, setShowAll] = useState(false);
 
   // Reset zoom when changing image or opening modal
   useEffect(() => {
@@ -56,9 +58,11 @@ const Gallery = () => {
     setZoomLevel(1);
   };
 
+  const visibleImages = showAll ? images : images.slice(0, 6);
+
   return (
     <section className="py-20 bg-[#FAF8F5]">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-7xl">
         <Heading 
           title1="Our" 
           title2="Gallery" 
@@ -69,24 +73,48 @@ const Gallery = () => {
         />
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mx-auto">
-          {images.map((src, idx) => (
-            <div 
-              key={idx} 
-              className="relative group overflow-hidden rounded-xl shadow-md cursor-pointer aspect-square"
-              onClick={() => openModal(idx)}
-            >
-              <img 
-                src={src} 
-                alt={`Gallery ${idx + 1}`} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              {/* <div className="absolute inset-0 bg-brand-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <Maximize className="text-white w-8 h-8 drop-shadow-md" />
-              </div> */}
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mx-auto">
+          <AnimatePresence>
+            {visibleImages.map((src) => {
+              const originalIndex = images.indexOf(src);
+              return (
+                <motion.div 
+                  key={src} 
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.8, y: 20 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  layout
+                  className="relative group overflow-hidden rounded-xl shadow-md cursor-pointer aspect-square"
+                  onClick={() => openModal(originalIndex)}
+                >
+                  <img 
+                    src={src} 
+                    alt={`Gallery ${originalIndex + 1}`} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Toggle Button */}
+        <motion.div layout className="flex justify-center mt-12">
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="group flex flex-col items-center gap-1"
+          >
+            <div className="px-8 py-3 bg-white shadow-sm border border-gray-200 rounded-full font-heading font-bold text-gray-800 tracking-wider uppercase text-sm hover:shadow-md hover:border-gold/50 transition-all duration-300">
+              {showAll ? "Close Gallery" : "Show More"}
             </div>
-          ))}
-        </div>
+            <div className={`mt-1 text-gold transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+        </motion.div>
       </div>
 
       {/* Lightbox Modal */}
@@ -121,7 +149,8 @@ const Gallery = () => {
           </button>
 
           {/* Image Container with Zoom */}
-          <div className="overflow-hidden max-w-5xl max-h-[80vh] w-full flex justify-center items-center px-24">
+          <div className="overflow-hidden max-w-5xl max-h-[80vh] w-full flex justify-center items-center px-4 md:px-24">
+
             <img 
               src={images[selectedIndex]} 
               alt={`Expanded view ${selectedIndex + 1}`}

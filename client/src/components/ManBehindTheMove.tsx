@@ -24,7 +24,7 @@ const ManBehindTheMove = () => {
           subtitleColor="text-gray-800"
         />
         <div
-          className="bg-light-gray md:max-w-7xl max-w-full mx-auto z-10 md:px-20 px-10 py-6 pt-8"
+          className=" bg-[#f4c430] bg-gradient-to-tl from-[#f4c430] from-0% to-[#fdd017] to-[74%] md:max-w-7xl max-w-full mx-auto z-10 md:px-20 px-10 py-6 pt-8"
           style={{
             borderTopLeftRadius: "120px",
             borderBottomLeftRadius: "0px",
@@ -36,14 +36,15 @@ const ManBehindTheMove = () => {
           {/* Content Section */}
           <div className="text-lg md:text-[18px] text-gray space-y-8 font-body leading-[1.85] drop-shadow-md">
             <ul className="space-y-4 mb-4 font-body text-[1.15rem] mx-auto max-w-4xl text-gray-800">
-            <p className="text-xl text-left md:text-4xl mb-10 mt-5 uppercase font-heading font-semibold leading-relaxed text-gray-800 max-w-[90%]">
-            <span className=" font-bold">Dr. Arawindhan J</span>
-            <p
-              className={`text-gray-800 uppercase text-sm tracking-[0.3em] font-medium mb-3`}
-            >
-              Founder & Visionary - Hope Kombucha
-            </p>
-          </p>
+            <div className="text-center md:text-left mb-10 mt-5 uppercase font-heading font-semibold leading-relaxed text-gray-800 max-w-full md:max-w-[90%]">
+              <span className="text-2xl md:text-4xl font-bold block">Dr. Arawindhan J</span>
+              <p
+                className={`text-gray-800 uppercase text-xs md:text-sm tracking-[0.3em] font-medium mt-2`}
+              >
+                Founder & Visionary - Hope Kombucha
+              </p>
+            </div>
+
               <li className="flex items-start">
                 <img
                   src={leaficon}

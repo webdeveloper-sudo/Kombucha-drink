@@ -1,70 +1,117 @@
 import { useState } from "react";
 import Heading from "./ui/Heading";
-import { MapPin, ExternalLink, ChevronDown } from "lucide-react";
+import { MapPin, ChevronDown } from "lucide-react";
+import pothys from "../assets/images/outlets/pothys.jpg";
+import grinde from "../assets/images/outlets/Grinde.jpg";
+import vjs from "../assets/images/outlets/sri-vijayaganapathy-stores.avif"
+import dailyneeds from "../assets/images/outlets/daily-needs.jpg"
+import nilgiris from "../assets/images/outlets/nilgiris-tiruvannamalai.avif"
+import hopecafe from "../assets/images/outlets/hope-cafe.jpg"
+import arcfoods from "../assets/images/outlets/dummy.avif"
+import farmfresh from "../assets/images/outlets/farm-fresh.avif"
+import pourtous from "../assets/images/outlets/pour-tous.jpg"
+import bluebasket from "../assets/images/outlets/blue-basket.jpg"
+import colours from "../assets/images/outlets/maghalakshmi-plaazaa.avif"
 
 const Outlets = () => {
   const allOutlets = [
     {
-      image:
-        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600",
-      name: "White Town Organic Cafe",
-      address: "12 Rue de la Marine, White Town, Pondicherry",
-      mapLink: "https://maps.google.com",
+      image: pothys,
+      name: "Pothys Super Store",
+      address: "Anna salai",
+      mapLink: "https://www.google.com/maps/search/Pothys+Super+Store+Anna+salai",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=600",
-      name: "Auroville Bakery & Store",
-      address: "Auroville Main Road, Kuilapalayam, Auroville",
-      mapLink: "https://maps.google.com",
+      image: grinde,
+      name: "Grinde Store",
+      address: "Nehru Street, Puducherry",
+      mapLink: "https://www.google.com/maps/search/Grinde+Store+Nehru+Street",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600",
-      name: "Heritage Supermarket",
-      address: "MG Road, Heritage Town, Pondicherry",
-      mapLink: "https://maps.google.com",
+      image: vjs,
+      name: "Vijayaganapathy Stores",
+      address: "Puducherry",
+      mapLink: "https://www.google.com/maps/search/Vijayaganapathy+Stores+Pondicherry",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=600",
-      name: "Besant Nagar Resto",
-      address: "2nd Avenue, Besant Nagar, Chennai",
-      mapLink: "https://maps.google.com",
+      image: dailyneeds,
+      name: "Daily Needs",
+      address: "Puducherry",
+      mapLink: "https://www.google.com/maps/search/Daily+Needs+Pondicherry",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?auto=format&fit=crop&q=80&w=600",
-      name: "Alwarpet Organic Mart",
-      address: "TTK Road, Alwarpet, Chennai",
-      mapLink: "https://maps.google.com",
+      image: nilgiris,
+      name: "Nilgiris Store",
+      address: "TV Malai",
+      mapLink: "https://www.google.com/maps/search/Nilgiris+Store+TV+Malai",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?auto=format&fit=crop&q=80&w=600",
-      name: "Indiranagar Health Stores",
-      address: "100ft Road, Indiranagar, Bangalore",
-      mapLink: "https://maps.google.com",
+      image: hopecafe,
+      name: "Hope Cafe",
+      address: "White Town, Puducherry",
+      mapLink: "https://www.google.com/maps/search/Hope+Cafe+Pondicherry",
+    },
+    {
+      image: farmfresh,
+      name: "Farm Fresh",
+      address: "Auroville, Puducherry",
+      mapLink: "https://www.google.com/maps/search/Farm+Fresh+Auroville",
+    },
+    {
+      image: pourtous,
+      name: "Pour tous Store",
+      address: "Auroville, Puducherry",
+      mapLink: "https://www.google.com/maps/search/Pour+tous+Store+Auroville",
+    },
+    {
+      image: bluebasket,
+      name: "Blue basket",
+      address: "Auroville, Puducherry",
+      mapLink: "https://www.google.com/maps/search/Blue+basket+Auroville",
+    },
+    {
+      image: arcfoods,
+      name: "ARC Foods",
+      address: "Chennai",
+      mapLink: "https://www.google.com/maps/search/ARC+Foods+Chennai",
+    },
+    {
+      image: arcfoods,
+      name: "ARC Foods",
+      address: "Madurai",
+      mapLink: "https://www.google.com/maps/search/ARC+Foods+Madurai",
+    },
+    {
+      image: arcfoods,
+      name: "ARC Foods",
+      address: "Coimbatore",
+      mapLink: "https://www.google.com/maps/search/ARC+Foods+Coimbatore",
+    },
+    
+    {
+      image: colours,
+      name: "Colours",
+      address: "Mahalakshmi Plaza, Villupuram",
+      mapLink: "https://www.google.com/maps/search/Colours+Mahalakshmi+Plaza+Villupuram",
     },
   ];
 
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const handleSeeMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 4, allOutlets.length));
+    setVisibleCount((prev) => Math.min(prev + 12, allOutlets.length));
   };
 
   return (
     <section
       className="py-20 relative w-full overflow-hidden bg-white"
       style={{
-        backgroundImage: "url('/src/assets/images/bg/graybg.jpg')",
-        backgroundColor: "#F5F5F5",
+
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-16 relative z-10">
         <Heading
           title1="Our"
           title2="Outlets"
@@ -75,18 +122,22 @@ const Outlets = () => {
         />
 
         <p className="text-center text-[#4A3D36] max-w-2xl mx-auto mb-16 text-[1.1rem]">
-          Grab your favorite Hope Life Kombucha at these verified retail and
-          cafe locations near you.
+          Our kombucha is available in the following markets:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
           {allOutlets.slice(0, visibleCount).map((outlet, index) => (
             <div
               key={index}
-              className="bg-white rounded-md p-2 shadow-[0_10px_30px_rgba(0,0,0,0.06)] border border-gray-100 hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden flex flex-col"
+              className="bg-white rounded-mdshadow-lg border border-gray-200 hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden flex flex-col"
             >
-              {/* Image */}
-              <div className="w-full h-56 rounded-md overflow-hidden mb-6 relative">
+              {/* Image with Link */}
+              <a
+                href={outlet.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-56 overflow-hidden mb-6 relative block"
+              >
                 <img
                   src={outlet.image}
                   alt={outlet.name}
@@ -95,20 +146,17 @@ const Outlets = () => {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
                 
                 {/* See In Map Overlay */}
-                <a
-                  href={outlet.mapLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* <div
                   className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-[#611082] backdrop-blur-sm text-white px-4 py-2 rounded-full font-bold tracking-widest text-[10px] uppercase hover:text-white transition-colors duration-300 shadow-md group-hover:shadow-lg"
                 >
                   <ExternalLink size={14} />
                   View In Map
-                </a>
-              </div>
+                </div> */}
+              </a>
 
               {/* Shop Name */}
               <div className="px-2 flex-grow">
-                <h3 className="text-[1.3rem] font-bold text-center text-gray-800 tracking-wide uppercase font-heading mb-3 line-clamp-1">
+                <h3 className=" font-bold text-center text-gray-800 tracking-wide capitalize  font-heading mb-3 line-clamp-1">
                   {outlet.name}
                 </h3>
 
@@ -130,7 +178,7 @@ const Outlets = () => {
           <div className="mt-16 flex justify-center">
             <button
               onClick={handleSeeMore}
-              className="flex text-sm items-center gap-2 border-2 border-gray-400 text-gray-800 py-2 px-8 rounded-full font-bold tracking-[0.2em] uppercase hover:bg-light-gray hover:text-gray-800 transition-all duration-300 shadow-sm"
+              className="flex text-sm items-center gap-2 border-2 border-gray-400 text-gray-800 py-2 px-8 rounded-full font-bold tracking-[0.2em] uppercase hover:bg-gold hover:text-gray-800 transition-all duration-300 shadow-sm"
             >
               See More <ChevronDown size={20} />
             </button>
