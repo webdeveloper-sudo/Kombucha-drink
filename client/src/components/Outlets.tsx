@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Heading from "./ui/Heading";
-import { MapPin, ChevronDown } from "lucide-react";
+import { MapPin } from "lucide-react";
 import pothys from "../assets/images/outlets/pothys.jpg";
 import grinde from "../assets/images/outlets/Grinde.jpg";
 import vjs from "../assets/images/outlets/sri-vijayaganapathy-stores.avif"
