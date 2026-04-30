@@ -18,15 +18,16 @@
   --hibiscus-primary: #ef4444;
   --hibiscus-secondary: #4c0519;
 }
+
 @theme {
   --color-light-gray: #E6E6E6;
   --color-light-gray-muted: #E3E3E3;
   --color-sage: #9CAF88;
-  --color-gold: #FFD600 ;
+  --color-gold: #FFD600;
   --color-cream: #FAF8F5;
   --color-text-dark: #2D3A35;
   --color-text-light: #F5F3EF;
-  
+
   --color-honey: #D4A84B;
   --color-berry: #7B3E6D;
   --color-indigo: #3B5998;
@@ -97,6 +98,7 @@
 }
 
 @layer base {
+
   *,
   *::before,
   *::after {
@@ -110,7 +112,7 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scroll-padding-top: 70PX;
+    scroll-padding-top: 100PX;
   }
 
   body {
@@ -124,7 +126,12 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
@@ -190,7 +197,8 @@
     background: none;
   }
 
-  ul, ol {
+  ul,
+  ol {
     list-style: none;
   }
 }
@@ -218,6 +226,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -235,9 +244,31 @@
   }
 }
 
-.bg-fizzy{
-  background-image: url("../src/assets/images/bg/27708569_beer_foam_hor_06_1_03.jpg");
+.bg-fizzy {
+  background-image: url("./assets/images/bg/27708569_beer_foam_hor_06_1_03.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-three, .bg-one, .bg-two, .bg-four {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg-three::before, .bg-one::before, .bg-two::before, .bg-four::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: blur(2px);
+  z-index: -1;
+  transform: scale(1.1);
 }
+
+.bg-three::before { background-image: url("./assets/images/bg/bg3.jpg"); }
+.bg-one::before { background-image: url("./assets/images/bg/bg1.jpg"); }
+.bg-two::before { background-image: url("./assets/images/bg/bg2.jpg"); }
+.bg-four::before { background-image: url("./assets/images/bg/bg4.jpg"); }

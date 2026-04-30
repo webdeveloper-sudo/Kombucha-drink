@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import bgbottles from "../assets/images/bg/ginger-mint-lemon.webp";
 
 import TurmericImg from "../assets/images/allflavours/Turmeric (1).webp";
 import GingerImg from "../assets/images/allflavours/Ginger.webp";
@@ -90,7 +91,16 @@ const AllFlavours = () => {
       : filteredProducts;
 
   return (
-    <div id="flavours" className="py-20 bg-white flex flex-col items-center" >
+    <div id="flavours" className="py-20 relative "   style={{
+          backgroundImage: `url(${bgbottles})`,
+          backgroundPosition: "center",
+          borderTopLeftRadius: "60px",
+          borderBottomRightRadius: "60px",
+        }} >
+                {/* Overlay */}
+      <div className="absolute inset-0 bg-white/76"></div>
+
+
       {/* Inline Styles specifically for Swiper overlap */}
       <style>{`
         .custom-swiper-pagination-bullet-active {
@@ -141,7 +151,8 @@ const AllFlavours = () => {
         }
       `}</style>
 
-      {/* Section Header */}
+    <div className="flex flex-col items-center relative z-10">
+        {/* Section Header */}
       <Heading title1="Our" title2="Flavours" subtitle="Discover" textAlignment="center" titleColor="text-gray-800" subtitleColor="text-gray-800"/>
 
       {/* Category Filter */}
@@ -183,6 +194,7 @@ const AllFlavours = () => {
             }}
             watchSlidesProgress={true} // Crucial for .swiper-slide-visible
             centeredSlides={true}
+            pagination={false}
             loop={true}
             slideToClickedSlide={true}
             spaceBetween={0}
@@ -203,40 +215,31 @@ const AllFlavours = () => {
                 className="flex justify-center"
               >
 
-                {/* Premium Glass Card replacing Shadcn UI */}
-                <div className="relative w-full max-w-[500px] h-[520px] bg-white/40 overflow-hidden transition-all duration-300 flex flex-col items-center py-10 px-6 group">
-                  {/* Subtle inner glass highlight */}
-                  <div className="absolute inset-0 border border-white/60 rounded-3xl pointer-events-none" />
-
-                  {/* Giant Category Text (Behind Bottle) */}
-                  <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-full mx-auto text-center z-0 pointer-events-none px-4">
-                    <span className="text-[18px] sm:text-[36px] font-heading text-black/30 uppercase tracking-[0.1em] whitespace-nowrap opacity-60">
-                      {product.category}
-                    </span>
-                  </div>
-
+                {/* Transparent Card replacing Glass Effect */}
+                <div className="relative w-full max-w-[500px] h-[540px] bg-transparent overflow-hidden transition-all duration-300 flex flex-col items-center px-6 group">
+                  
                   {/* Profile / Bottle Image Container */}
-                  <div className="relative w-72 h-72 mb-4 transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl flex items-center justify-center">
+                  <div className="relative w-80 h-80 sm:w-96 sm:h-96 mb-0 transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl flex items-center justify-center">
                     <img
                       src={product.image}
                       alt={product.title}
                       className="object-contain h-full w-full z-10"
                     />
-                    {/* Glowing orb behind bottle */}
-                    <div className="absolute inset-0 bg-white/40 blur-2xl rounded-full scale-150 -z-10" />
                   </div>
 
                   {/* Name and Tagline */}
-                  <h3
-                    className={`text-2xl uppercase font-heading text-gray-800 font-bold text-center mb-2 drop-shadow-sm`}
-                  >
-                    {product.title}
-                  </h3>
-                  <p className="text-[14px] text-gray-800/80 text-center font-body flex-grow mb-6">
-                    {product.description}
-                  </p>
+                  <div className=" relative z-20">
+                    <h3
+                      className={`text-2xl uppercase font-heading text-gray-800 font-bold text-center mb-1 drop-shadow-sm`}
+                    >
+                      {product.title}
+                    </h3>
+                    <p className="text-[14px] text-gray-800/80 text-center font-body flex-grow max-w-[280px]">
+                      {product.description}
+                    </p>
+                  </div>
 
-                  <div className="w-full border-t border-light-gray/10 my-2 mt-auto" />
+                  {/* <div className="w-full border-t border-light-gray/10 my-2 mt-auto" /> */}
                 </div>
               </SwiperSlide>
             ))}
@@ -259,9 +262,10 @@ const AllFlavours = () => {
           </button>
         )}
       </div>
-      <div className="mx-auto py-4">
+      <div className="mx-auto pb-4">
           <Button title="Enquire now" href="#contact" variant="secondary" />
         </div>
+    </div>
     </div>
   );
 };

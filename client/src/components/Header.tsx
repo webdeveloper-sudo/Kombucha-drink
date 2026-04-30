@@ -19,14 +19,14 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all  duration-500 ease-in-out flex items-center justify-between px-6 lg:px-12 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all  duration-500 ease-in-out flex items-center justify-between px-4 lg:px-12 ${
         isScrolled || isMenuOpen
-          ? "py-2 bg-white shadow-lg border-b border-white"
-          : "py-6 lg:py-8 bg-transparent"
+          ? " bg-[#611082] shadow-lg border-b border-white"
+          : "py-6 lg:py-4 bg-transparent"
       }`}
     >
-      <div className="text-white text-2xl bg-white rounded-full border border-gray-400 font-heading font-medium tracking-[0.2em] uppercase drop-shadow-md relative z-50">
-        <img src={hopelifelogo} alt="Logo" width={140} />
+      <div >
+        <img src={hopelifelogo} alt="Logo" width={130} />
       </div>
 
       {/* Desktop Navigation */}
@@ -35,7 +35,7 @@ const Header = () => {
           <a
             key={item}
             href={`#${item.toLowerCase().replace(" ", "-")}`}
-            className={` ${isScrolled ? "text-gray-800/80 font-bold hover:underline hover:underline-offset-8 hover:decoration-brand-purple decoration-1" : "text-white/80 font-medium hover:underline hover:underline-offset-8 hover:decoration-white"} uppercase text-xs lg:text-sm tracking-[0.2em]  transition-colors `}
+            className={` ${isScrolled ? "text-white font-bold hover:underline hover:underline-offset-8 hover:decoration-brand-purple decoration-1" : "text-white/80 font-medium hover:underline hover:underline-offset-8 hover:decoration-white"} uppercase text-xs lg:text-sm tracking-[0.2em]  transition-colors `}
           >
             {item}
           </a>
@@ -43,7 +43,7 @@ const Header = () => {
 
         <a
           href="#flavours"
-          className={` ${isScrolled ? "text-white/80 py-3 font-bold bg-[#611082]" : "text-white/80 font-medium "} flex gap-2 rounded-full border border-gray-300 py-2 px-3 items-center max-w-fit uppercase text-xs lg:text-md tracking-[0.2em] `}
+          className={` ${isScrolled ? "text-white py-3 font-bold bg-[#611082]" : "text-white font-medium "} flex gap-2 rounded-full border border-white py-2 px-3 items-center max-w-fit uppercase text-xs lg:text-md tracking-[0.2em] `}
         >
            <Phone className="w-4 h-4" /> +91 72005 04628
         </a>
@@ -55,7 +55,7 @@ const Header = () => {
         aria-label="Menu"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+        {isMenuOpen ? <X className="w-7 h-7 text-white" /> : <Menu className="w-7 h-7 text-white" />}
       </button>
 
       {/* Mobile Menu Dropdown */}

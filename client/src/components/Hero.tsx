@@ -37,7 +37,7 @@ const products: Product[] = [
   {
     id: 3,
     title: "Elixir Kombucha",
-    description: "Premium wellness elixir with ancient herbs",
+    description: "Kombucha in its purest form",
     image: ElixirImg,
     colorName: "elixir",
   },
@@ -214,7 +214,7 @@ function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gold selection:bg-white/30 selection:text-white">
+    <section className="relative h-[100vh] w-full overflow-hidden bg-gold selection:bg-white/30 selection:text-white">
       {/* Background Gradient Container mapping for lag-free opacity crossfade */}
       {products.map((product, index) => (
         <div
@@ -241,7 +241,7 @@ function Hero() {
       />
 
       {/* 3-Column Grid Layout */}
-      <div className="relative z-10 w-full min-h-screen grid grid-cols-1 lg:grid-cols-3 px-6 lg:px-12 py-20 lg:py-32 items-center">
+      <div className="relative z-10 w-full min-h-screen grid grid-cols-1 lg:grid-cols-3 px-6 lg:px-12 py-36 lg:py-32 items-center">
         {/* Left Column: Top-Left Aligned */}
         <div className="h-full flex flex-col justify-between col-span-1 pt-8 lg:pt-24 text-center lg:text-left">
           <div>
@@ -249,8 +249,8 @@ function Hero() {
               Welcome to Hope Life
             </p>
             <h1 className="text-white font-heading text-4xl md:text-5xl lg:text-7xl font-light leading-tight drop-shadow-lg">
-              Premium <br />
-              <span className="font-semibold italic">Crafted</span> Kombucha
+              Premium <br /> Crafted 
+              <span className="font-semibold italic"> Kombucha</span> 
             </h1>
             <div className="w-12 h-[2px] bg-white/40 mt-6 mx-auto lg:mx-0 rounded-full" />
           </div>
@@ -258,12 +258,12 @@ function Hero() {
 
         {/* Center Column: Image Container with 3D Transform Properties */}
         <div
-          className="col-span-1 flex items-center justify-center relative w-full h-[40vh] md:h-[50vh] lg:h-full my-8 lg:my-0"
+          className="col-span-1 flex items-center justify-center relative w-full h-[35vh] md:h-[50vh] lg:h-full mt-8 lg:my-0"
           style={{ perspective: "1500px" }}
         >
           {/* GSAP will animate this image wrapper directly */}
           <div
-            className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[750px] lg:h-[750px]"
+            className="relative w-80 h-80 sm:w-90 sm:h-90 lg:w-[750px] lg:h-[750px]"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="absolute inset-0 bg-white/10 blur-[60px] rounded-full scale-75 pointer-events-none" />
@@ -278,8 +278,8 @@ function Hero() {
         </div>
 
         {/* Right Column: Bottom-Right Aligned */}
-        <div className="h-full flex flex-col justify-end items-center lg:items-end text-center lg:text-right col-span-1 pb-4 lg:pb-16 overflow-hidden">
-          <div className="p-4 lg:p-6 rounded-2xl ">
+        <div className="h-full flex flex-col justify-end items-center lg:items-end text-center lg:text-right col-span-1   lg:pb-16 overflow-hidden">
+          <div className="p-4  lg:p-6 rounded-2xl ">
             <h2
               ref={titleRef}
               className="text-2xl md:text-3xl lg:text-6xl italic font-bold text-white mb-2 tracking-tight drop-shadow-md"

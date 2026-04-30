@@ -2,23 +2,19 @@ import Packaging from "../assets/images/packaging.webp";
 import Heading from "./ui/Heading";
 import leaficon from "../assets/icons/monstera.png";
 
+
 const OurCustomers = () => {
   return (
     <section
-      className="w-full relative "
-      style={{
-        backgroundImage: "url('/src/assets/images/bg/graybg.jpg')",
-        backgroundColor: "#fff",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="w-full relative bg-four"
+     
     >
       {/* <img
         src={flower}
         alt=""
         className="absolute bottom-0 left-0 w-full max-w-full opacity-40 pointer-events-none select-none"
       /> */}
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-20 px-6">
+      <div className="container bg-white/80 my-16 rounded-2xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-20 px-6">
         {/* Left Side: Image */}
         <div className="flex-1 py-20 w-full flex justify-center md:justify-end ">
           <div

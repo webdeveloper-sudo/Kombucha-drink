@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative py-24 bg-[#FAF8F5] overflow-hidden">
+    <section className="relative py-10 bg-three overflow-hidden">
       {/* Background Decor */}
       {/* <img
         src={flower}
@@ -52,7 +52,7 @@ const Contact = () => {
         className="absolute top-0 right-0 w-1/3 opacity-10 pointer-events-none transform -scale-x-100 rotate-180"
       /> */}
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+      <div className="container py-10 bg-white/80 rounded-2xl mx-auto px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
         {/* Left Side: Contact Form and Info */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
           <Heading
@@ -64,18 +64,16 @@ const Contact = () => {
             subtitleColor="text-gray-800"
           />
 
-          <p className="text-gray-600 text-lg font-body mb-10 mt-2">
+          <p className="text-gray-800 text-lg font-body mb-10 mt-2">
             Whether you have a question about our flavors, wholesale inquiries,
             or just want to explore a healthier lifestyle, we'd love to hear
             from you.
           </p>
 
           {/* Contact Details Grid */}
-          <div className="flex flex-col gap-3 mb-10 pl-2">
-          
-
+          <div className="flex flex-col gap-4 mb-10 pl-2">
             <div
-              className="flex items-center gap-6 group bg-gold px-8 py-4"
+              className="flex items-center gap-4 md:gap-6 bg-white/90 group px-4 md:px-8 py-4"
               style={{
                 borderTopLeftRadius: "30px",
                 borderBottomLeftRadius: "0px",
@@ -83,21 +81,21 @@ const Contact = () => {
                 borderTopRightRadius: "0px",
               }}
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-brand-purple text-white group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 shadow-sm">
-                <Phone size={26} />
+              <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-[#F6C62D] text-gray-800 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                <Phone size={24} className="md:w-[26px] md:h-[26px]" />
               </div>
-              <div>
-                <h4 className="text-gray-800 font-bold text-xl font-heading mb-1">
+              <div className="min-w-0">
+                <h4 className="text-gray-800 font-bold text-lg md:text-xl italic font-heading mb-0.5 md:mb-1">
                   Enquire Us
                 </h4>
-                <span className="text-gray-800  font-body text-md">
+                <p className="text-gray-800 font-body text-sm md:text-md break-words">
                   +91 72005 04628
-                </span>
+                </p>
               </div>
             </div>
 
             <div
-              className="flex items-center gap-6 group bg-gold px-8 py-4"
+              className="flex items-center bg-white/90 gap-4 md:gap-6 group px-4 md:px-8 py-4"
               style={{
                 borderTopLeftRadius: "30px",
                 borderBottomLeftRadius: "0px",
@@ -105,20 +103,21 @@ const Contact = () => {
                 borderTopRightRadius: "0px",
               }}
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-brand-purple text-white group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 shadow-sm">
-                <Mail size={26} />
+              <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-[#F6C62D] text-gray-800 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                <Mail size={24} className="md:w-[26px] md:h-[26px]" />
               </div>
-              <div>
-                <h4 className="text-gray-800 font-bold text-xl font-heading mb-1">
-                   Enquire Us
+              <div className="min-w-0">
+                <h4 className="text-gray-800 font-bold text-lg md:text-xl italic font-heading mb-0.5 md:mb-1">
+                  Email Us
                 </h4>
-                <span className="text-gray-800  font-body text-md">
+                <p className="text-gray-800 font-body text-sm md:text-md break-all">
                   vp.expansions@hopemarket.in
-                </span>
+                </p>
               </div>
             </div>
-              <div
-              className="flex items-center gap-6 group bg-gold px-8 py-4"
+
+            <div
+              className="flex items-center bg-white/90 gap-4 md:gap-6 group px-4 md:px-8 py-4"
               style={{
                 borderTopLeftRadius: "30px",
                 borderBottomLeftRadius: "0px",
@@ -126,16 +125,16 @@ const Contact = () => {
                 borderTopRightRadius: "0px",
               }}
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-brand-purple text-white group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 shadow-sm">
-                <MapPin size={26} />
+              <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-[#F6C62D] text-gray-800 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                <MapPin size={24} className="md:w-[26px] md:h-[26px]" />
               </div>
-              <div>
-                <h4 className="text-gray-800 font-bold text-xl font-heading mb-1">
+              <div className="min-w-0">
+                <h4 className="text-gray-800 font-bold text-lg md:text-xl italic font-heading mb-0.5 md:mb-1">
                   Reach Us
                 </h4>
-                <span className="text-gray-800  font-body text-md">
-                  Marie Oulgaret, Auroville Road, Pondicherry - 605111, India
-                </span>
+                <p className="text-gray-800 font-body text-sm md:text-md leading-snug break-words">
+                  19, Villupuram Pondicherry Main Road , Villiyanur, Pondicherry 605110
+                </p>
               </div>
             </div>
           </div>
@@ -284,7 +283,7 @@ const Contact = () => {
               
               <button
                 onClick={() => setShowSuccessPopup(false)}
-                className="bg-brand-purple text-white px-8 py-3.5 rounded-full font-medium tracking-widest uppercase text-sm hover:bg-brand-purple/90 transition-colors w-full shadow-md"
+                className="bg-brand-purple text-gray-800 px-8 py-3.5 rounded-full font-medium tracking-widest uppercase text-sm hover:bg-brand-purple/90 transition-colors w-full shadow-md"
               >
                 Done
               </button>

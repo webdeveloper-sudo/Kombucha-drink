@@ -1,115 +1,134 @@
 import { QuoteIcon } from "lucide-react";
 import Heading from "./ui/Heading";
 import leaficon from "../assets/icons/monstera.png";
+import bgbottle from "../assets/images/bg/ginger-mint-lemon.webp";
+import drImage from "../assets/images/Dr.-J.arawindhan.webp";
 
 const ManBehindTheMove = () => {
   return (
     <section
-      className="py-20 bg-white"
-      // style={{
-      //   backgroundImage: "url('/src/assets/images/bg/pattern.svg')",
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   backgroundRepeat: "repeat-y",
-      //   opacity: 1,
-      // }}
+      className="py-20 relative overflow-hidden bg-[#f4c430] bg-gradient-to-tl from-[#f4c430] from-0% to-[#fdd017] to-[74%]"
     >
       <div className="container mx-auto">
-        <Heading
-          title1="The Man"
-          title2="Behind the Move"
-          subtitle="Discover"
-          textAlignment="center"
-          titleColor="text-gray-800"
-          subtitleColor="text-gray-800"
-        />
         <div
-          className=" bg-[#f4c430] bg-gradient-to-tl from-[#f4c430] from-0% to-[#fdd017] to-[74%] md:max-w-7xl max-w-full mx-auto z-10 md:px-20 px-10 py-6 pt-8"
+          className="relative mx-auto container py-12 overflow-hidden z-10 md:px-20 px-6"
           style={{
-            borderTopLeftRadius: "120px",
-            borderBottomLeftRadius: "0px",
-            borderBottomRightRadius: "120px",
-            borderTopRightRadius: "0px",
+            backgroundImage: `url(${bgbottle})`,
+            backgroundPosition: "center",
+            borderTopLeftRadius: "60px",
+            borderBottomRightRadius: "60px",
           }}
         >
-          
-          {/* Content Section */}
-          <div className="text-lg md:text-[18px] text-gray space-y-8 font-body leading-[1.85] drop-shadow-md">
-            <ul className="space-y-4 mb-4 font-body text-[1.15rem] mx-auto max-w-4xl text-gray-800">
-            <div className="text-center md:text-left mb-10 mt-5 uppercase font-heading font-semibold leading-relaxed text-gray-800 max-w-full md:max-w-[90%]">
-              <span className="text-2xl md:text-4xl font-bold block">Dr. Arawindhan J</span>
-              <p
-                className={`text-gray-800 uppercase text-xs md:text-sm tracking-[0.3em] font-medium mt-2`}
-              >
-                Founder & Visionary - Hope Kombucha
-              </p>
-            </div>
+          {/* Overlay (controls transparency) */}
+          <div className="absolute inset-0 bg-white/76"></div>
 
-              <li className="flex items-start">
-                <img
-                  src={leaficon}
-                  alt=""
-                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
-                />
-                <span className="pt-2">
-                  {" "}
-                  Hope Kombucha was founded in 2021 by{" "}
-                  <span className="font-bold text-gray-800 underline underline-offset-6 decoration-brand-purple decoration-2">
-                    Dr. Arawindhan J
-                  </span>{" "}
-                  with a clear belief - India deserves a safer, smarter
-                  alternative to sugary beverages.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <img
-                  src={leaficon}
-                  alt=""
-                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
-                />
-                <span className="pt-2">
-                  {" "}
-                  Driven by a passion for functional wellness and clean-label
-                  nutrition, he set out to blend traditional fermentation
-                  science with modern food safety systems.
-                </span>
-              </li>
-              <li className="flex items-center">
-                <img
-                  src={leaficon}
-                  alt=""
-                  className="mr-4 mt-2 w-9 h-9 rounded-full bg-[#611082] p-1 flex-shrink-0"
-                />
-                <span className="pt-2">
-                  {" "}
-                  What began as a vision to create a probiotic-rich,
-                  gut-friendly beverage has evolved into a structured,
-                  FSSAI-compliant brand focused on quality, scalability, and
-                  national expansion.
-                </span>
-              </li>
-            </ul>
+          {/* Content */}
+          <div className="relative z-10">
+            <Heading
+              title1="The Man"
+              title2="Behind the Move"
+              subtitle="Discover"
+              textAlignment="center"
+              titleColor="text-gray-800"
+              subtitleColor="text-gray-800"
+            />
 
-            <div className="pt-10 text-center  px-4 w-full flex justify-center">
-              <p
-                className="text-[26px] md:text-[32px] md:leading-[1.4] font-heading text-[#3E3224] italic tracking-wide font-bold relative px-8 py-8 w-full  mx-auto lg:max-w-4xl shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-white/60 bg-white rounded-2xl transform hover:scale-[1.02] transition-transform duration-500"
-                style={{
-                  borderTopLeftRadius: "60px",
-                  borderBottomLeftRadius: "0px",
-                  borderBottomRightRadius: "60px",
-                  borderTopRightRadius: "0px",
-                }}
-              >
-                “ Health is not a trend. It is a daily choice.{" "}
-                <span>
-                  <br />
-                </span>{" "}
-                And that choice should taste good. ”
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mt-16 items-start">
+              {/* Left Column: Image & Bio Title */}
+              <div className="flex flex-col items-center lg:items-end">
+                <div className="relative group max-w-[320px] sm:max-w-[450px] lg:max-w-[600px] w-full">
+                  {/* Decorative Glow */}
+                  <div className="absolute inset-0 bg-[#611082]/10 rounded-2xl blur-3xl transform scale-110 group-hover:scale-125 transition-transform duration-700"></div>
+                  
+                  {/* Image Container */}
+                  <div className="relative z-10 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-[8px] md:border-[12px] border-white/80 backdrop-blur-sm"
+                    style={{
+                      borderTopLeftRadius: "60px",
+                      borderBottomRightRadius: "60px",
+                    }}
+                  >
+                    <img
+                      src={drImage}
+                      alt="Dr. Arawindan J - Founder"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    
+                    {/* Dark Gradient Overlay for readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+
+                    {/* Name and Title Overlay (Bottom Left) */}
+                    <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-left uppercase font-heading text-white">
+                      <span className="text-xl md:text-3xl font-bold block tracking-tight drop-shadow-md">
+                        Dr. Arawindan J
+                      </span>
+                      <p className="text-white/90 uppercase text-[10px] md:text-xs tracking-[0.2em] font-medium mt-1 md:mt-2 drop-shadow-md">
+                        Founder & Visionary
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Key Beliefs & Story */}
+              <div className="flex flex-col justify-center pt-4">
+                <ul className="space-y-8 font-body text-[1.1rem] md:text-[1.2rem] text-gray-800 leading-relaxed">
+                  <li className="flex items-start group">
+                    <img
+                      src={leaficon}
+                      alt=""
+                      className="mr-5 mt-1 w-10 h-10 rounded-full bg-[#611082] p-2 flex-shrink-0 shadow-md group-hover:rotate-12 transition-transform duration-300"
+                    />
+                    <span>
+                      Hope Kombucha was founded in 2021 by <strong>Dr. Arawindan J</strong> with a clear belief - India deserves a safer, smarter
+                      alternative to sugary beverages.
+                    </span>
+                  </li>
+                  <li className="flex items-start group">
+                    <img
+                      src={leaficon}
+                      alt=""
+                      className="mr-5 mt-1 w-10 h-10 rounded-full bg-[#611082] p-2 flex-shrink-0 shadow-md group-hover:rotate-12 transition-transform duration-300"
+                    />
+                    <span>
+                      Driven by a passion for functional wellness and clean-label
+                      nutrition, he set out to blend traditional fermentation
+                      science with modern food safety systems.
+                    </span>
+                  </li>
+                  <li className="flex items-start group">
+                    <img
+                      src={leaficon}
+                      alt=""
+                      className="mr-5 mt-1 w-10 h-10 rounded-full bg-[#611082] p-2 flex-shrink-0 shadow-md group-hover:rotate-12 transition-transform duration-300"
+                    />
+                    <span>
+                      What began as a vision to create a probiotic-rich,
+                      gut-friendly beverage has evolved into a structured,
+                      FSSAI-compliant brand focused on quality, scalability, and
+                      national expansion.
+                    </span>
+                  </li>
+                </ul>
+
+                {/* Quote Section integrated into content flow */}
+                <div className="pt-12">
+                  <div
+                    className="bg-[#f4c430] bg-gradient-to-tl from-[#f4c430] from-0% to-[#fdd017] to-[74%] p-8 relative shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-white/60 transform hover:scale-[1.01] transition-transform duration-500"
+                    style={{
+                      borderTopLeftRadius: "40px",
+                      borderBottomRightRadius: "40px",
+                    }}
+                  >
+                    <p className="text-[22px] md:text-[26px] font-heading text-[#3E3224] italic font-bold leading-snug">
+                      “ Health is not a trend. It is a daily choice. And that choice should taste good. ”
+                    </p>
+
+                    <QuoteIcon  className="text-[#611082] w-8 h-8 md:w-12 md:h-12 absolute bottom-4 right-6" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <QuoteIcon size={80} className="text-[#611082]/90 ms-auto mb-2" />
         </div>
       </div>
     </section>

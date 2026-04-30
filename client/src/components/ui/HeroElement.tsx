@@ -1,8 +1,8 @@
 import React from "react";
-import rose1 from "../../assets/images/Elements/pngwing.com (11).png";
-import rose2 from "../../assets/images/Elements/pngwing.com (10).png";
+import rose2 from "../../assets/images/Elements/rose1.png";
+import rose1 from "../../assets/images/Elements/rose2.png";
 import mint1 from "../../assets/images/Elements/—Pngtree—green mint leaf with water_15696937.png";
-import mint2 from "../../assets/images/Elements/pngwing.com (2).png";
+import mint2 from "../../assets/images/Elements/—Pngtree—mint leaves isolated_13004783.png";
 import hibiscus1 from "../../assets/images/Elements/—Pngtree—red hibiscus flower_16332158.png";
 import hibiscus2 from "../../assets/images/Elements/Red_Hibiscus_Flower_PNG___Realistic_Tropical_Illustration-PNGLove.com.png";
 import ginger1 from "../../assets/images/Elements/—Pngtree—fresh ginger root with leaves_19168044.png";
@@ -44,7 +44,7 @@ const HeroElement: React.FC<HeroElementProps> = ({
         ref={element1Ref}
         src={images.img1}
         alt=""
-        className="absolute bottom-[10%] left-[5%] lg:left-[10%] w-32 md:w-48 lg:w-64 opacity-0 object-contain drop-shadow-2xl"
+        className="absolute bottom-5 md:bottom-[10%] left-[5%] lg:left-[7%] w-30 md:w-48 lg:w-64 opacity-0 object-contain drop-shadow-2xl"
       />
 
       {/* Element 2: Right to Left (Right Top/Center) */}
@@ -52,7 +52,7 @@ const HeroElement: React.FC<HeroElementProps> = ({
         ref={element2Ref}
         src={images.img2}
         alt=""
-        className="absolute bottom-40 lg:bottom-80 right-5 lg:right-10 w-32 md:w-56 lg:w-80 opacity-0 object-contain drop-shadow-2xl"
+        className="absolute bottom-50 md:bottom-80 right-5 lg:right-10 w-32 md:w-56 lg:w-80 opacity-0 object-contain drop-shadow-2xl"
       />
     </div>
   );

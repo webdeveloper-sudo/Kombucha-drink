@@ -37,19 +37,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gray-500 text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-gradient-to-t from-[#760aa3] to-[#43075c] text-white md:pt-24 pt-8 pb-12 overflow-hidden">
 
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Logo & Mission */}
           <div>
-            <div className="bg-white rounded-full inline-block p-2 mb-3 border border-white/20 shadow-lg">
+            <div className=" rounded-full inline-block mb-3 ">
               <img
                 src={hopelifelogo}
                 alt="Hope Kombucha Logo"
-                width={80}
-                height={80}
+                width={130}
               />
             </div>
             <p className="text-white mb-6 font-body leading-relaxed max-w-xs">
@@ -79,17 +78,16 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 font-body text-white">
               {[
-                "Shop",
                 "Our Story",
-                "Process",
-                "Journal",
-                "Faq",
-                "Contact",
+                "Our Flavours",
+                "Client Says",
+                "Outlets",
+                "Gallery",
               ].map((link) => (
                 <li key={link}>
                   <a
-                    href={`#${link.toLowerCase()}`}
-                    className="hover:text-[#611082] text-white transition-colors flex items-center gap-2 group"
+                   href={`#${link.toLowerCase().replace(" ", "-")}`}
+                    className="hover:underline  underline-offset-8 decoration-1 decoration-white/80 text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-[#611082] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link}
@@ -110,20 +108,20 @@ const Footer = () => {
                 <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span>+91 72005 04628</span>
+                <a href="tel:+917200504628" className="hover:underline underline-offset-8 decoration-1 decoration-white/80 text-white transition-colors flex items-center gap-2 group">+91 72005 04628</a>
               </li>
 
               <li className="flex gap-4 items-center">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1">
                   <Mail className="w-10 h-5" />
                 </div>
-                <span>vp.expansions@hopemarket.in</span>
+                <a href="mailto:vp.expansions@hopemarket.in" className="hover:underline underline-offset-8 decoration-1 decoration-white/80 text-white transition-colors flex items-center gap-2 group">vp.expansions@hopemarket.in</a>
               </li>
                <li className="flex gap-4 items-start">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-[#611082] hover:border-[#611082] transition-all duration-300 transform hover:-translate-y-1">
                   <MapPin className="w-10 h-5" />
                 </div>
-                <span>Marie Oulgaret, Auroville Road, Pondicherry - 605111, India</span>
+                <span>19, Villupuram Pondicherry Main Road , Villiyanur, Pondicherry 605110</span>
               </li>
 
             </ul>
@@ -157,7 +155,7 @@ const Footer = () => {
             </h4>
             <div className="w-full h-full pb-10 rounded overflow-hidden  shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9914406081493!2d2.2922926156744043!3d48.8583736086627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1689241975!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3903.8192317477883!2d79.75444687505906!3d11.917665288309166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1777542737803!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -170,11 +168,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white text-xs font-body tracking-wider uppercase">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4 text-white text-xs font-body tracking-wider uppercase">
           <p className="text-gray-200">
             © {currentYear} Hope Kombucha. All Rights Reserved.
           </p>
-          <div className="flex gap-8">
+          {/* <div className="flex gap-8">
             <a
               href="#"
               className="hover:text-white text-gray-200 transition-colors"
@@ -187,7 +185,7 @@ const Footer = () => {
             >
               Terms of Service
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 

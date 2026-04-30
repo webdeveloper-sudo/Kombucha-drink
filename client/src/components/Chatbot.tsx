@@ -707,24 +707,19 @@ const Chatbot = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.85, y: 24 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="w-[320px] sm:w-[390px] bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 mb-4"
+            className="w-[320px] sm:w-[390px] bg-white rounded-md shadow-2xl overflow-hidden border border-gray-100 mb-4"
           >
             {/* Header */}
-            <div className="bg-gold px-5 py-4 flex items-center justify-between text-white">
+            <div className="bg-brand-purple px-5 py-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full  bg-white/20 flex items-center justify-center">
-                  <Bot size={22} className="text-[#611082]" />
+                <div className="w-10 h-10 rounded-full  bg-white flex items-center justify-center">
+                  <Bot size={22} className="text-brand-purple" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-base leading-tight">
+                  <h3 className="font-bold text-xl italic leading-tight">
                     Kombucha Buddy
                   </h3>
-                  <div className="flex items-center gap-1 mt-0.5">
-                    <span className="w-2 h-2 rounded-full bg-[#4ade80] inline-block" />
-                    <p className="text-[11px] text-white/70">
-                      Online · Hope Kombucha
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
               <button
@@ -738,7 +733,7 @@ const Chatbot = () => {
             {/* Messages */}
             <div
               ref={scrollRef}
-              className="h-[340px] overflow-y-auto p-4 space-y-3 bg-gold/60"
+              className="h-[340px] overflow-y-auto p-4 space-y-3 bg-brand-purple/10"
             >
               {messages.map((msg, i) => (
                 <div
@@ -746,14 +741,14 @@ const Chatbot = () => {
                   className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} items-end gap-2`}
                 >
                   {msg.role === "bot" && (
-                    <div className="w-7 h-7 rounded-full bg-gold flex items-center justify-center flex-shrink-0 mb-0.5">
-                      <Bot size={14} className="text-[#611082]" />
+                    <div className="w-7 h-7 rounded-full bg-brand-purple flex items-center justify-center flex-shrink-0 mb-0.5">
+                      <Bot size={14} className="text-white" />
                     </div>
                   )}
                   <div
                     className={`max-w-[78%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed shadow-sm whitespace-pre-line ${
                       msg.role === "user"
-                        ? "bg-gold text-white rounded-br-sm"
+                        ? "bg-brand-purple text-white rounded-br-sm"
                         : "bg-white border border-gray-100 text-gray-800 rounded-bl-sm"
                     }`}
                   >
@@ -763,21 +758,21 @@ const Chatbot = () => {
               ))}
               {isTyping && (
                 <div className="flex items-end gap-2">
-                  <div className="w-7 h-7 rounded-full bg-gold flex items-center justify-center flex-shrink-0">
-                    <Bot size={14} className="text-[#611082]" />
+                  <div className="w-7 h-7 rounded-full bg-brand-purple flex items-center justify-center flex-shrink-0">
+                    <Bot size={14} className="text-white" />
                   </div>
                   <div className="bg-white border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
                     <div className="flex gap-1 items-center">
                       <span
-                        className="w-2 h-2 bg-gold/40 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-brand-purple/40 rounded-full animate-bounce"
                         style={{ animationDelay: "0ms" }}
                       />
                       <span
-                        className="w-2 h-2 bg-gold/40 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-brand-purple/40 rounded-full animate-bounce"
                         style={{ animationDelay: "150ms" }}
                       />
                       <span
-                        className="w-2 h-2 bg-gold/40 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-brand-purple/40 rounded-full animate-bounce"
                         style={{ animationDelay: "300ms" }}
                       />
                     </div>
@@ -792,7 +787,7 @@ const Chatbot = () => {
                 <button
                   key={qr}
                   onClick={() => handleSend(qr)}
-                  className="flex-shrink-0 text-xs px-3 py-1.5 rounded-full border border-gold/20 text-gold bg-gold/5 hover:bg-gold/10 transition font-medium"
+                  className="flex-shrink-0 text-xs px-3 py-1.5 rounded-full border border-brand-purple/20 text-brand-purple bg-brand-purple/5 hover:bg-brand-purple/10 transition font-medium"
                 >
                   {qr}
                 </button>
@@ -806,7 +801,7 @@ const Chatbot = () => {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                  className="flex-grow bg-gold rounded-full px-4 py-2.5 text-sm outline-none ring-1 focus:ring-2 ring-gold/30 transition"
+                  className="flex-grow bg-transparent rounded-full px-4 py-2.5 text-sm outline-none ring-1 focus:ring-2 ring-brand-purple/30 transition"
                   placeholder="Ask about Hope Kombucha..."
                 />
                 <button

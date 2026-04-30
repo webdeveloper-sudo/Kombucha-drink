@@ -98,20 +98,18 @@ const Outlets = () => {
 
   const [visibleCount, setVisibleCount] = useState(8);
 
-  const handleSeeMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 12, allOutlets.length));
-  };
+
 
   return (
     <section
-      className="py-20 relative w-full overflow-hidden bg-white"
+      className="py-20 relative w-full overflow-hidden bg-three"
       style={{
 
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="container mx-auto px-16 relative z-10">
+      <div className="container mx-auto rounded-2xl py-16 bg-white/85 md:px-16 px-4 relative z-10">
         <Heading
           title1="Our"
           title2="Outlets"
@@ -121,7 +119,7 @@ const Outlets = () => {
           subtitleColor="text-gray-800"
         />
 
-        <p className="text-center text-[#4A3D36] max-w-2xl mx-auto mb-16 text-[1.1rem]">
+        <p className="text-center text-gray-600 max-w-2xl text-sm  mx-auto mb-12 uppercase tracking-[0.2em] font-semibold">
           Our kombucha is available in the following markets:
         </p>
 
@@ -129,7 +127,7 @@ const Outlets = () => {
           {allOutlets.slice(0, visibleCount).map((outlet, index) => (
             <div
               key={index}
-              className="bg-white rounded-mdshadow-lg border border-gray-200 hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden flex flex-col"
+              className="bg-white/80 rounded-md rounded-mdshadow-lg border border-gray-200 hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden flex flex-col"
             >
               {/* Image with Link */}
               <a
@@ -173,18 +171,24 @@ const Outlets = () => {
           ))}
         </div>
 
-        {/* See More Button */}
-        {visibleCount < allOutlets.length && (
-          <div className="mt-16 flex justify-center">
-            <button
-              onClick={handleSeeMore}
-              className="flex text-sm items-center gap-2 border-2 border-gray-400 text-gray-800 py-2 px-8 rounded-full font-bold tracking-[0.2em] uppercase hover:bg-gold hover:text-gray-800 transition-all duration-300 shadow-sm"
-            >
-              See More <ChevronDown size={20} />
-            </button>
-          </div>
-        )}
+   
       </div>
+           {/* Toggle Button */}
+        <div className="flex justify-center mt-16">
+          <button 
+            onClick={() => setVisibleCount(visibleCount < allOutlets.length ? allOutlets.length : 8)}
+            className="group flex flex-col items-center gap-1"
+          >
+            <div className="px-8 py-3 bg-white shadow-sm border border-gray-200 rounded-full font-heading font-bold text-gray-800 tracking-wider uppercase text-sm hover:shadow-md hover:border-gold/50 transition-all duration-300">
+              {visibleCount < allOutlets.length ? "Show More" : "Show Less"}
+            </div>
+            <div className={`mt-1 text-gold transition-transform duration-300 ${visibleCount >= allOutlets.length ? 'rotate-180' : ''}`}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+        </div>
     </section>
   );
 };

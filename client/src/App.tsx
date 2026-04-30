@@ -53,16 +53,19 @@ function MainApp() {
       {/* <hr className="border-gray-300 container mx-auto" /> */}
       <OurCustomers />
       {/* <hr className="border-gray-300 container mx-auto" /> */}
-            <BottlesRow />
+      <div className="hidden md:block">
+        <BottlesRow />
+      </div>
 
       
       {/* <hr className="border-gray-300 container mx-auto" /> */}
        
-      <div id="outlets">
-        <Outlets />
-      </div>
+     
        <div id="valentino-story">
         <ValentinoHolt />
+      </div>
+       <div id="outlets">
+        <Outlets />
       </div>
       {/* <hr className="border-gray-300 container mx-auto" /> */}
       <div id="gallery">

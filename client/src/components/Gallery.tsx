@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X, ZoomIn, ZoomOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Heading from './ui/Heading';
+import bgbottles from "../assets/images/bg/ginger-mint-lemon.webp";
+
 
 // Import all images explicitly for Vite bundling
 import img1 from '../assets/images/gallery/insta-posters/insta-postersimage1.webp';
@@ -61,8 +63,16 @@ const Gallery = () => {
   const visibleImages = showAll ? images : images.slice(0, 6);
 
   return (
-    <section className="py-20 bg-[#FAF8F5]">
-      <div className="container mx-auto px-6 max-w-7xl">
+    <section className="py-20 relative" style={{
+        backgroundImage: `url(${bgbottles})`,
+ 
+        backgroundPosition: "center",
+        borderTopLeftRadius: "60px",
+        borderBottomRightRadius: "20px",
+      }}>
+              <div className="absolute inset-0 bg-white/76"></div>
+
+      <div className="container mx-auto  relative z-10">
         <Heading 
           title1="Our" 
           title2="Gallery" 
