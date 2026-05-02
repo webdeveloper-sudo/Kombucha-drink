@@ -212,14 +212,14 @@ const AllFlavours = () => {
             {carouselItems.map((product, index) => (
               <SwiperSlide
                 key={`${product.id}-${index}`}
-                className="flex justify-center"
+                className="flex justify-center" 
               >
 
                 {/* Transparent Card replacing Glass Effect */}
-                <div className="relative w-full max-w-[500px] h-[540px] bg-transparent overflow-hidden transition-all duration-300 flex flex-col items-center px-6 group">
+                <div className="relative w-full max-w-[500px] h-[540px] pt-10 bg-transparent overflow-hidden transition-all duration-300 flex flex-col items-center px-6 group">
                   
                   {/* Profile / Bottle Image Container */}
-                  <div className="relative w-80 h-80 sm:w-96 sm:h-96 mb-0 transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl flex items-center justify-center">
+                  <div className="relative w-70 h-70 sm:w-96 sm:h-96 mb-0 transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl flex items-center justify-center">
                     <img
                       src={product.image}
                       alt={product.title}

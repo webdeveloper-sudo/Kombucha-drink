@@ -28,6 +28,13 @@ const products: Product[] = [
     colorName: "turmeric",
   },
   {
+    id: 4,
+    title: "Butterfly Pea Kombucha",
+    description: "Enchanting blue butterfly flower infusion",
+    image: ButterflyPeaImg,
+    colorName: "pea",
+  },
+  {
     id: 2,
     title: "Ginger Kombucha",
     description: "Warming ginger kick for digestive wellness",
@@ -35,18 +42,11 @@ const products: Product[] = [
     colorName: "ginger",
   },
   {
-    id: 3,
-    title: "Elixir Kombucha",
-    description: "Kombucha in its purest form",
-    image: ElixirImg,
-    colorName: "elixir",
-  },
-  {
-    id: 4,
-    title: "Butterfly Pea Kombucha",
-    description: "Enchanting blue butterfly flower infusion",
-    image: ButterflyPeaImg,
-    colorName: "pea",
+    id: 7,
+    title: "Hibiscus Kombucha",
+    description: "Tangy hibiscus for heart health",
+    image: HibiscusImg,
+    colorName: "hibiscus",
   },
   {
     id: 5,
@@ -56,18 +56,19 @@ const products: Product[] = [
     colorName: "rose",
   },
   {
+    id: 3,
+    title: "Elixir Kombucha",
+    description: "Kombucha in its purest form",
+    image: ElixirImg,
+    colorName: "elixir",
+  },
+
+  {
     id: 6,
     title: "Mint Kombucha",
     description: "Cooling mint for refreshing vitality",
     image: MintImg,
     colorName: "mint",
-  },
-  {
-    id: 7,
-    title: "Hibiscus Kombucha",
-    description: "Tangy hibiscus for heart health",
-    image: HibiscusImg,
-    colorName: "hibiscus",
   },
 ];
 
@@ -158,7 +159,6 @@ function Hero() {
     const tl = gsap.timeline({
       onComplete: () => {
         setCurrentIndex(nextIndex);
-        runEntranceAnimation();
       },
     });
 
@@ -170,33 +170,34 @@ function Hero() {
       z: -500,
       duration: 1,
       ease: "power2.in",
-    }).to(
-      [titleRef.current, descRef.current],
-      {
-        x: -50,
-        opacity: 0,
-        filter: "blur(5px)",
-        duration: 0.6,
-        stagger: 0.05,
-        ease: "power2.in",
-      },
-      "-=1",
-    )
-    .to(
-      [element1Ref.current, element2Ref.current],
-      {
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.in",
-      },
-      "-=0.5",
-    );
+    })
+      .to(
+        [titleRef.current, descRef.current],
+        {
+          x: -50,
+          opacity: 0,
+          filter: "blur(5px)",
+          duration: 0.6,
+          stagger: 0.05,
+          ease: "power2.in",
+        },
+        "-=1",
+      )
+      .to(
+        [element1Ref.current, element2Ref.current],
+        {
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.in",
+        },
+        "-=0.5",
+      );
   };
 
   useEffect(() => {
-    // Run initial entrance animation for the first slide
+    // Run entrance animation whenever currentIndex changes (including initial mount)
     runEntranceAnimation();
-  }, []);
+  }, [currentIndex]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -234,10 +235,11 @@ function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.3)_100%)] pointer-events-none" />
 
       {/* Floating Elements Animation */}
-      <HeroElement 
-        variant={currentProduct.colorName} 
-        element1Ref={element1Ref} 
-        element2Ref={element2Ref} 
+      <HeroElement
+        key={currentIndex}
+        variant={currentProduct.colorName}
+        element1Ref={element1Ref}
+        element2Ref={element2Ref}
       />
 
       {/* 3-Column Grid Layout */}
@@ -249,8 +251,8 @@ function Hero() {
               Welcome to Hope Life
             </p>
             <h1 className="text-white font-heading text-4xl md:text-5xl lg:text-7xl font-light leading-tight drop-shadow-lg">
-              Premium <br /> Crafted 
-              <span className="font-semibold italic"> Kombucha</span> 
+              Premium <br /> Crafted
+              <span className="font-semibold italic"> Kombucha</span>
             </h1>
             <div className="w-12 h-[2px] bg-white/40 mt-6 mx-auto lg:mx-0 rounded-full" />
           </div>
@@ -269,6 +271,7 @@ function Hero() {
             <div className="absolute inset-0 bg-white/10 blur-[60px] rounded-full scale-75 pointer-events-none" />
             <img
               ref={imageRef}
+              key={currentIndex}
               src={currentProduct.image}
               alt={currentProduct.title}
               className="w-full h-full object-contain relative z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
@@ -303,7 +306,10 @@ function Hero() {
           className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-all duration-300 group"
           aria-label="Previous slide"
         >
-          <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          <ChevronLeft
+            size={20}
+            className="group-hover:-translate-x-1 transition-transform"
+          />
         </button>
 
         <button
@@ -311,10 +317,12 @@ function Hero() {
           className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-all duration-300 group"
           aria-label="Next slide"
         >
-          <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+          <ChevronRight
+            size={20}
+            className="group-hover:translate-x-1 transition-transform"
+          />
         </button>
       </div>
-
     </section>
   );
 }
