@@ -8,7 +8,7 @@ const Showcase = () => {
   const links = [
     {
       name: "Website",
-      url: "https://hopekombucha-agoc.netlify.app/",
+      url: "https://hopelife.in",
       icon: <Globe className="w-6 h-6 text-gray-800" />,
       description: "Explore our premium living probiotic kombucha",
       gradient: "from-gold/10 via-white/40 to-gold/10",
